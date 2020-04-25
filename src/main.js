@@ -66,6 +66,23 @@ import '@fullcalendar/timegrid/main.min.css';
 import AppSubmenu from './AppSubmenu';
 Vue.directive("appsubmenu", AppSubmenu)
 
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faCertificate } from '@fortawesome/free-solid-svg-icons'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
+import { faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faUserSecret)
+library.add(faCertificate)
+library.add(faEye)
+library.add(faEyeSlash)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+
+
 Vue.use(ToastService);
 
 
