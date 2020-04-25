@@ -1,6 +1,6 @@
 <template>
 	<div :class="containerClass" @click="onDocumentClick">
-		<AppTopBar :topbarMenuActive="topbarMenuActive" :activeTopbarItem="activeTopbarItem" :horizontal="isHorizontal()" :profileMode="profileMode" :model="grouped ? menuGrouped : menuUngrouped" :layoutMode="layoutMode" :menuActive="menuActive" @menubutton-click="onMenuButtonClick" @topbar-menubutton-click="onTopbarMenuButtonClick" @topbar-item-click="onTopbarItemClick" @menu-click="onMenuClick"/>
+		<AppTopBar :topbarMenuActive="topbarMenuActive" :activeTopbarItem="activeTopbarItem" :horizontal="isHorizontal()" :profileMode="profileMode" :model="menu" :layoutMode="layoutMode" :menuActive="menuActive" @menubutton-click="onMenuButtonClick" @topbar-menubutton-click="onTopbarMenuButtonClick" @topbar-item-click="onTopbarItemClick" @menu-click="onMenuClick"/>
 
 		<div class="p-grid">
 			<div class="layout-dashboard p-col-12 p-lg-3">
@@ -40,21 +40,22 @@ export default {
             darkMenu: false,
             profileMode: 'inline',
             grouped: true,
-            menuGrouped: Array,
-            menuUngrouped: Array,
-            menu : [
-                {label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/'},
-                {label: 'Sandbox', icon: 'pi pi-fw pi-cog', to: '/Sandbox'},
-                {
-                    label: 'My TourAbility', icon: 'pi pi-fw pi-home', badge: '',
-                    items: [
-                        {label: 'My Accommodations', icon: 'pi pi-fw pi-th-large', to: '/accommodations'},
-                        {label: 'My Certifications', icon: 'pi pi-fw pi-star-o', to: '/certifications'},
-                        {label: 'My Courses', icon: 'pi pi-fw pi-table', to: '/courses'}
-                    ]
-                }
-            ]
-        }
+            menu: Array
+		}
+	},
+	created: function(){
+		this.menu = [
+			{label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/'},
+			{label: 'Sandbox', icon: 'pi pi-fw pi-cog', to: '/Sandbox'},
+			{
+				label: 'My TourAbility', icon: 'pi pi-fw pi-home', badge: '',
+				items: [
+					{label: 'My Accommodations', icon: 'pi pi-fw pi-th-large', to: '/accommodations'},
+					{label: 'My Certifications', icon: 'pi pi-fw pi-star-o', to: '/certifications'},
+					{label: 'My Courses', icon: 'pi pi-fw pi-table', to: '/courses'}
+				]
+			}
+		];
     },
     watch: {
         $route() {
@@ -63,10 +64,18 @@ export default {
         }
     },
     methods: {
-        onWrapperClick() {
+		onDocumentClick() {
+			if (!this.topbarItemClick) {
+				this.activeTopbarItem = null;
+				this.topbarMenuActive = false;
+			}
+
             if (!this.menuClick) {
-                this.overlayMenuActive = false;
-                this.mobileMenuActive = false;
+				if (this.isHorizontal() || this.isSlim()) {
+					EventBus.$emit('reset_active_index');
+					this.menuActive = false;
+				}
+				this.hideOverlayMenu();
             }
 
 			this.topbarItemClick = false;
