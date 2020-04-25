@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <DataView :value="cars" :layout="layout" paginatorPosition="both" :paginator="true" :rows="20"
+        <DataView :value="structures" :layout="layout" paginatorPosition="both" :paginator="true" :rows="20"
                   :sortOrder="sortOrder" :sortField="sortField">
             <template #header>
                 <div class="p-grid p-nogutter">
@@ -19,24 +19,55 @@
                 <div class="p-col-12">
                     <div class="car-details">
                         <div>
-                            <img :src="'demo/images/car/' + slotProps.data.brand + '.png'" :alt="slotProps.data.brand"/>
+                            <img :src="'assets/layout/images/structures/' + slotProps.data.image + '.jpeg'" :alt="slotProps.data.brand"/>
                             <div class="p-grid">
-                                <div class="p-col-12">Vin: <b>{{slotProps.data.vin}}</b></div>
-                                <div class="p-col-12">Year: <b>{{slotProps.data.year}}</b></div>
-                                <div class="p-col-12">Brand: <b>{{slotProps.data.brand}}</b></div>
-                                <div class="p-col-12">Color: <b>{{slotProps.data.color}}</b></div>
+                                <div class="p-col-12"><b style="fontSize: 1.5em">{{slotProps.data.name}}</b></div>
+                                <div class="p-col-12">{{slotProps.data.location.council}} ({{slotProps.data.location.region}} - {{slotProps.data.location.country}})</div>
+                                
+                                <div class="p-col-1">
+                                    <i  v-if="slotProps.data.published" class="pi pi-eye"  style="fontSize: 2em;color:#00cc00;"></i>
+                                    <i  v-else class="pi pi-eye-slash"  style="fontSize: 2em;color:#989898;"></i>
+                                </div>
+
+                                <div class="p-col-3" >
+                                    <div v-if="!getCertificationTitle(slotProps.data.certifications)">
+                                        <span class="team-member-role">Not certified</span>
+                                    </div>
+                                    <div v-else>
+                                        <i style="fontSize: 2em;color:#989898;" class="pi pi-star"></i>
+                                        <span class="team-member-role">{{getCertificationTitle(slotProps.data.certifications)}}</span>
+                                    </div>                                   
+                                </div>
+
+
                             </div>
                         </div>
-                        <Button icon="pi pi-search"></Button>
+                        <Button icon="pi pi-plus"></Button>
                     </div>
                 </div>
             </template>
             <template #grid="slotProps">
                 <div style="padding: .5em" class="p-col-12 p-md-3">
                     <Panel :header="slotProps.data.vin" style="text-align: center">
-                        <img :src="'demo/images/car/' + slotProps.data.brand + '.png'" :alt="slotProps.data.brand"/>
-                        <div class="car-detail">{{slotProps.data.year}} - {{slotProps.data.color}}</div>
-                        <Button icon="pi pi-search"></Button>
+                        <img :src="'assets/layout/images/structures/' + slotProps.data.image + '.jpeg'" :alt="slotProps.data.image"/>
+                        <div class="car-detail">{{slotProps.data.name}} - {{slotProps.data.location.council}}</div>
+                        
+                        <div class="p-col-12">
+                                    <i  v-if="slotProps.data.published" class="pi pi-eye"  style="fontSize: 2em;color:#00cc00;"></i>
+                                    <i  v-else class="pi pi-eye-slash"  style="fontSize: 2em;color:#989898;"></i>
+                                </div>
+
+                                <div class="p-col-12" >
+                                    <div v-if="!getCertificationTitle(slotProps.data.certifications)">
+                                        <span class="team-member-role">Not certified</span>
+                                    </div>
+                                    <div v-else>
+                                        <i style="fontSize: 2em;color:#989898;" class="pi pi-star"></i>
+                                        <span class="team-member-role">{{getCertificationTitle(slotProps.data.certifications)}}</span>
+                                    </div>                                   
+                                </div>
+
+                        <Button icon="pi pi-plus"></Button>
                     </Panel>
                 </div>
             </template>
@@ -52,6 +83,7 @@
     export default {
         data() {
             return {
+                structures: null,
                 cars: null,
                 layout: 'list',
                 sortKey: null,
@@ -70,6 +102,7 @@
         },
         mounted() {
             this.mockService.getCarsLarge().then(data => this.cars = data);
+            this.mockService.getStructures().then(data => this.structures = data);
         },
         methods: {
             onSortChange(event) {
@@ -85,6 +118,20 @@
                     this.sortField = value;
                     this.sortKey = sortValue;
                 }
+            },
+            getCertificationTitle(certifications){
+                if(certifications){
+                    if(certifications.level1 && certifications.level1.status==='certified'){
+                        if(certifications.level2 && certifications.level2.status==='certified'){
+                            if(certifications.level3 && certifications.level3.status==='certified'){
+                                return "Level 3";
+                            }
+                            return "Level 2";
+                        }
+                        return "Level 1";
+                    }
+                }
+                return null;
             }
         }
     }
@@ -94,4 +141,60 @@
    .table-title{
        font-size: 1.3em;
    }
+
+   .p-dropdown {
+    width: 12em;
+}
+
+.p-dataview {
+    .car-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2em;
+        border-bottom: 1px solid #d9dad9;
+
+        & > div {
+            display: flex;
+            align-items: center;
+
+            img {
+                margin-right: 14px;
+            }
+        }
+    }
+
+    .car-detail {
+        padding: 0 1em 1em 1em;
+        border-bottom: 1px solid #d9dad9;
+        margin: 1em;
+    }
+
+    .p-panel-content {
+        padding: 1em;
+    }
+}
+
+@media (max-width: 1024px) {
+	.p-dataview {
+        .car-details {
+            img {
+                width: 75px;
+            }
+        }
+    }
+}
+
+/* Dark Theme such as luna-amber, luna-blue, luna-green and luna-pink */
+.dark-theme {
+    .p-dataview {
+        .car-details {
+            border-bottom-color: #191919;
+        }
+
+        .car-detail {
+            border-bottom: 1px solid #191919;
+        }
+    }
+}
 </style>
