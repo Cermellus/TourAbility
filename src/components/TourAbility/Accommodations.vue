@@ -23,10 +23,9 @@
                             <div class="p-grid">
                                 <div class="p-col-12"><b style="fontSize: 1.5em">{{slotProps.data.name}}</b></div>
                                 <div class="p-col-12">{{slotProps.data.location.council}} ({{slotProps.data.location.region}} - {{slotProps.data.location.country}})</div>
-                                
                                 <div class="p-col-1">
-                                    <i  v-if="slotProps.data.published" class="pi pi-eye"  style="fontSize: 2em;color:#00cc00;"></i>
-                                    <i  v-else class="pi pi-eye-slash"  style="fontSize: 2em;color:#989898;"></i>
+                                    <font-awesome-icon icon="eye"       v-if="slotProps.data.published" style="fontSize: 1.5em;color:#00cc00;"  />
+                                    <font-awesome-icon icon="eye-slash" v-else style="fontSize: 1.5em;color:#989898;"  />
                                 </div>
 
                                 <div class="p-col-3" >
@@ -34,9 +33,9 @@
                                         <span class="team-member-role">Not certified</span>
                                     </div>
                                     <div v-else>
-                                        <i style="fontSize: 2em;color:#989898;" class="pi pi-star"></i>
-                                        <span class="team-member-role">{{getCertificationTitle(slotProps.data.certifications)}}</span>
-                                    </div>                                   
+                                        <font-awesome-icon icon="certificate" style="fontSize:1.5em;color:#989898;"  />
+                                        <span class="team-member-role"> {{getCertificationTitle(slotProps.data.certifications)}}</span>
+                                    </div>
                                 </div>
 
 
@@ -51,10 +50,9 @@
                     <Panel :header="slotProps.data.vin" style="text-align: center">
                         <img :src="'assets/layout/images/structures/' + slotProps.data.image + '.jpeg'" :alt="slotProps.data.image"/>
                         <div class="car-detail">{{slotProps.data.name}} - {{slotProps.data.location.council}}</div>
-                        
                         <div class="p-col-12">
-                                    <i  v-if="slotProps.data.published" class="pi pi-eye"  style="fontSize: 2em;color:#00cc00;"></i>
-                                    <i  v-else class="pi pi-eye-slash"  style="fontSize: 2em;color:#989898;"></i>
+                                    <font-awesome-icon icon="eye"       v-if="slotProps.data.published" style="fontSize: 1.5em;color:#00cc00;"  />
+                                    <font-awesome-icon icon="eye-slash" v-else style="fontSize: 1.5em;color:#989898;"  />
                                 </div>
 
                                 <div class="p-col-12" >
@@ -62,9 +60,9 @@
                                         <span class="team-member-role">Not certified</span>
                                     </div>
                                     <div v-else>
-                                        <i style="fontSize: 2em;color:#989898;" class="pi pi-star"></i>
+                                        <font-awesome-icon icon="certificate" style="fontSize:1.5em;color:#989898;"  />
                                         <span class="team-member-role">{{getCertificationTitle(slotProps.data.certifications)}}</span>
-                                    </div>                                   
+                                    </div>
                                 </div>
 
                         <Button icon="pi pi-plus"></Button>
