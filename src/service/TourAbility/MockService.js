@@ -2,10 +2,20 @@ import axios from 'axios'
 
 export default class MockService {
 
-	getSampleRequest(){
+	getStructures(){
+		return axios.get('assets/layout/data/structures.json').then(res => res.data);
+	}
 
-		return axios.get('assets/layout/data/TA/dati.json').then(res => res.data.data);
+	getCertifications(){
+		return axios.get('assets/layout/data/certifications.json').then(res => res.data);
+	}
 
+	getCertificators(){
+		return axios.get('assets/layout/data/certificators.json').then(res => res.data);
+	}
+
+	getLandmarks(){
+		return axios.get('assets/layout/data/landmarks.json').then(res => res.data);
 	}
 
 
