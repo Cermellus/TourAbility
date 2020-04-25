@@ -1,8 +1,23 @@
 <template>
 	<div class="layout-footer">
-		<span class="footer-text" style="margin-right: 5px">PrimeVue</span>
-		<img src="assets/layout/images/logo.svg" alt="sigma" width="80"/>
-		<span class="footer-text" style="margin-left: 5px">Theme and Layout</span>
+		<div class="p-grid">
+			<div class="p-col-6">
+				<a href="/" class="logo-container">
+					<img src="assets/layout/images/logo-black.png" alt="babylon-layout"/>
+				</a>
+			</div>
+			<div class="p-col-6 footer-icons">
+				<button class="p-link">
+					<i class="pi pi-home"></i>
+				</button>
+				<button class="p-link">
+					<i class="pi pi-globe"></i>
+				</button>
+				<button class="p-link">
+					<i class="pi pi-envelope"></i>
+				</button>
+			</div>
+		</div>
 	</div>
 </template>
 

@@ -1,263 +1,414 @@
- <template>
-<div class="p-grid p-fluid dashboard">
-	<div class="p-col-12 p-lg-4">
-		<div class="card summary">
-			<span class="title">Users</span>
-			<span class="detail">Number of visitors</span>
-			<span class="count visitors">12</span>
-		</div>
-	</div>
-	<div class="p-col-12 p-lg-4">
-		<div class="card summary">
-			<span class="title">Sales</span>
-			<span class="detail">Number of purchases</span>
-			<span class="count purchases">534</span>
-		</div>
-	</div>
-	<div class="p-col-12 p-lg-4">
-		<div class="card summary">
-			<span class="title">Revenue</span>
-			<span class="detail">Income for today</span>
-			<span class="count revenue">$3,200</span>
-		</div>
-	</div>
-
-	<div class="p-col-12 p-md-6 p-xl-3">
-		<div class="highlight-box">
-			<div class="initials" style="background-color: #007be5; color: #00448f"><span>TV</span></div>
-			<div class="highlight-details ">
-				<i class="pi pi-search"></i>
-				<span>Total Queries</span>
-				<span class="count">523</span>
-			</div>
-		</div>
-	</div>
-	<div class="p-col-12 p-md-6 p-xl-3">
-		<div class="highlight-box">
-			<div class="initials" style="background-color: #ef6262; color: #a83d3b"><span>TI</span></div>
-			<div class="highlight-details ">
-				<i class="pi pi-question-circle"></i>
-				<span>Total Issues</span>
-				<span class="count">81</span>
-			</div>
-		</div>
-	</div>
-	<div class="p-col-12 p-md-6 p-xl-3">
-		<div class="highlight-box">
-			<div class="initials" style="background-color: #20d077; color: #038d4a"><span>OI</span></div>
-			<div class="highlight-details ">
-				<i class="pi pi-filter"></i>
-				<span>Open Issues</span>
-				<span class="count">21</span>
-			</div>
-		</div>
-	</div>
-	<div class="p-col-12 p-md-6 p-xl-3">
-		<div class="highlight-box">
-			<div class="initials" style="background-color: #f9c851; color: #b58c2b"><span>CI</span></div>
-			<div class="highlight-details ">
-				<i class="pi pi-check"></i>
-				<span>Closed Issues</span>
-				<span class="count">60</span>
-			</div>
-		</div>
-	</div>
-
-	<div class="p-col-12 p-md-6 p-lg-4">
-		<Panel header="Tasks" style="height: 100%">
-			<ul class='task-list'>
-				<li>
-					<Checkbox name="task" value="reports" v-model="tasksCheckbox" />
-					<span class="task-name">Sales Reports</span>
-					<i class="pi pi-chart-bar" />
-				</li>
-				<li>
-					<Checkbox name="task" value="invoices" v-model="tasksCheckbox" />
-					<span class="task-name">Pay Invoices</span>
-					<i class="pi pi-dollar" />
-				</li>
-				<li>
-					<Checkbox name="task" value="dinner" v-model="tasksCheckbox" />
-					<span class="task-name">Dinner with Tony</span>
-					<i class="pi pi-user" />
-				</li>
-				<li>
-					<Checkbox name="task" value="meeting" v-model="tasksCheckbox" />
-					<span class="task-name">Client Meeting</span>
-					<i class="pi pi-users" />
-				</li>
-				<li>
-					<Checkbox name="task" value="theme" v-model="tasksCheckbox" />
-					<span class="task-name">New Theme</span>
-					<i class="pi pi-globe" />
-				</li>
-				<li>
-					<Checkbox name="task" value="flight" v-model="tasksCheckbox" />
-					<span class="task-name">Flight Ticket</span>
-					<i class="pi pi-briefcase" />
-				</li>
-			</ul>
-		</Panel>
-	</div>
-	
-	<div class="p-col-12 p-md-6 p-lg-4 p-fluid contact-form">
-		<Panel header="Contact Us">
-			<div class="p-grid">
-				<div class="p-col-12">
-					<Dropdown v-model="dropdownCity" :options="dropdownCities" optionLabel="name" placeholder="Select a City" />
-				</div>
-				<div class="p-col-12">
-					<InputText type="text" placeholder="Name" />
-				</div>
-				<div class="p-col-12">
-					<InputText type="text" placeholder="Age" />
-				</div>
-				<div class="p-col-12">
-					<InputText type="text" placeholder="Message" />
-				</div>
-				<div class="p-col-12">
-					<Button type="button" label="Send" icon="pi pi-envelope"/>
-				</div>
-			</div>
-		</Panel>
-	</div>
-
-	<div class="p-col-12 p-lg-4 contacts">
-		<Panel header="Contacts">
-			<ul>
-				<li>
-					<button class="p-link">
-						<img src="assets/layout/images/avatar_1.png" width="35" alt="avatar1"/>
-						<span class="name">Claire Williams</span>
-						<span class="email">clare@pf-sigma.com</span>
-					</button>
-				</li>
-				<li>
-					<button class="p-link">
-						<img src="assets/layout/images/avatar_2.png" width="35" alt="avatar2"/>
-						<span class="name">Jason Dourne</span>
-						<span class="email">jason@pf-sigma.com</span>
-					</button>
-				</li>
-				<li>
-					<button class="p-link">
-						<img src="assets/layout/images/avatar_3.png" width="35" alt="avatar3"/>
-						<span class="name">Jane Davidson</span>
-						<span class="email">jane@pf-sigma.com</span>
-					</button>
-				</li>
-				<li>
-					<button class="p-link">
-						<img src="assets/layout/images/avatar_4.png" width="35" alt="avatar4"/>
-						<span class="name">Tony Corleone</span>
-						<span class="email">tony@pf-sigma.com</span>
-					</button>
-				</li>
-			</ul>
-		</Panel>
-	</div>
-	
-	<div class="p-col-12 p-lg-6">
-		<div class="card">
-			<h1 style="font-size:16px">Recent Sales</h1>
-			<DataTable :value="dataTableCars" class="p-datatable-responsive" :selection.sync="dataTableSelectedCar" selectionMode="single" dataKey="vin">
-				<Column field="vin" header="Vin" :sortable="true"></Column>
-				<Column field="year" header="Year" :sortable="true"></Column>
-				<Column field="brand" header="Brand" :sortable="true"></Column>
-				<Column field="color" header="Color" :sortable="true"></Column>
-                <Column headerStyle="width: 8em; text-align: center" bodyStyle="text-align: center">
-                    <template #body="slotProps">
-                        <span class="p-column-title">Color</span>
-                        {{slotProps.data.color}}
-                    </template>
-                    <template #header>
-                        <Button type="button" icon="pi pi-cog"></Button>
-                    </template>
-                    <template #body="slotProps">
-                        <Button type="button" icon="pi pi-search" class="p-button-success" style="margin-right: .5em"></Button>
-                        <Button type="button" icon="pi pi-pencil" class="p-button-warning"></Button>
-                    </template>
-                </Column>
-			</DataTable>
-		</div>
-	</div>
-	<div class="p-col-12 p-lg-6">
-		<div class="card">
-			<Chart type="line" :data="lineData" />
-		</div>
-	</div>
-
-	<div class="p-col-12 p-lg-8">
-		<Panel header="Calendar" style="height: 100%">
-			<FullCalendar :events="events" :options="options" />
-		</Panel>
-	</div>
-
-	<div class="p-col-12 p-lg-4">
-		<Panel header="Activity" style="height: 100%">
-			<div class="activity-header">
-				<div class="p-grid">
-					<div class="p-col-6">
-						<span style="font-weight:bold">Last Activity</span>
-						<p>Updated 1 minute ago</p>
+<template>
+	<div class="layout-dashboard">
+		<div class="p-grid">
+			<div class="p-col-12 p-lg-6 p-xl-3">
+				<div class="overview-box sales">
+					<i class="overview-icon pi pi-dollar"></i>
+					<span class="overview-title">Sales</span>
+					<i class="overview-arrow pi pi-chevron-circle-up"></i>
+					<div class="overview-numbers">
+						$ 92,440
 					</div>
-					<div class="p-col-6" style="text-align: right">
-						<Button label="Refresh" icon="pi pi-refresh" />
+					<div class="overview-subinfo">
+						21% more than yesterday
+					</div>
+				</div>
+			</div>
+			<div class="p-col-12 p-lg-6 p-xl-3">
+				<div class="overview-box views">
+					<i class="overview-icon pi pi-search"></i>
+					<span class="overview-title">Views</span>
+					<i class="overview-arrow pi pi-chevron-circle-up"></i>
+					<div class="overview-numbers">
+						7029
+					</div>
+					<div class="overview-subinfo">
+						2% more than yesterday
+					</div>
+				</div>
+			</div>
+			<div class="p-col-12 p-lg-6 p-xl-3">
+				<div class="overview-box users">
+					<i class="overview-icon pi pi-users"></i>
+					<span class="overview-title">Users</span>
+					<i class="overview-arrow pi pi-chevron-circle-up"></i>
+					<div class="overview-numbers">
+						9522
+					</div>
+					<div class="overview-subinfo">
+						7% more than yesterday
+					</div>
+				</div>
+			</div>
+			<div class="p-col-12 p-lg-6 p-xl-3">
+				<div class="overview-box checkin">
+					<i class="overview-icon pi pi-map-marker"></i>
+					<span class="overview-title">Check-Ins</span>
+					<i class="overview-arrow pi pi-chevron-circle-up"></i>
+					<div class="overview-numbers">
+						4211
+					</div>
+					<div class="overview-subinfo">
+						18% more than yesterday
 					</div>
 				</div>
 			</div>
 
-			<ul class="activity-list">
-				<li>
-					<div class="count">$900</div>
-					<div class="p-grid">
-						<div class="p-col-6">Income</div>
-						<div class="p-col-6">95%</div>
-					</div>
-				</li>
-				<li>
-					<div class="count" style="background-color:#f9c851">$250</div>
-					<div class="p-grid">
-						<div class="p-col-6">Tax</div>
-						<div class="p-col-6">24%</div>
-					</div>
-				</li>
-				<li>
-					<div class="count" style="background-color:#20d077">$125</div>
-					<div class="p-grid">
-						<div class="p-col-6">Invoices</div>
-						<div class="p-col-6">55%</div>
-					</div>
-				</li>
-				<li>
-					<div class="count" style="background-color:#f9c851">$250</div>
-					<div class="p-grid">
-						<div class="p-col-6">Expenses</div>
-						<div class="p-col-6">15%</div>
-					</div>
-				</li>
-				<li>
-					<div class="count" style="background-color:#007be5">$350</div>
-					<div class="p-grid">
-						<div class="p-col-6">Bonus</div>
-						<div class="p-col-6">5%</div>
-					</div>
-				</li>
-				<li>
-					<div class="count" style="background-color:#ef6262">$500</div>
-					<div class="p-grid">
-						<div class="p-col-6">Revenue</div>
-						<div class="p-col-6">25%</div>
-					</div>
-				</li>
-			</ul>
-		</Panel>
-	</div>
-</div>
-	
-	
-	
+			<div class="p-col-12 p-lg-8">
+				<div class="card card-w-title statistics">
+					<h1>Statistics</h1>
+					<Chart type="line" :data="chartData" :options="chartOptions"/>
+				</div>
+			</div>
 
+			<div class="p-col-12 p-lg-4">
+				<div class="user-card card">
+					<div class="user-card-header">
+						<img src="assets/layout/images/dashboard/bg-header.png" alt="babylon-layout" class="profile-image"/>
+					</div>
+					<div class="user-card-content">
+						<img src="assets/layout/images/avatar.png" alt="babylon-layout"/>
+						<Button icon="pi pi-plus" @click="toggle"/>
+						<Menu :model="menuItems" :popup="true" ref="menu" appendTo="body"/>
+
+						<div class="user-card-name">
+							<span>Arlene Welch</span>
+						</div>
+
+						<div class="user-detail">
+							<ul>
+								<li class="clearfix">
+									<i class="pi pi-list"></i>
+									<span class="project-title">Tasks</span>
+									<span class="project-detail">3 open</span>
+									<div class="project-progressbar">
+										<div class="project-progressbar-value" style="width: 50%"></div>
+									</div>
+								</li>
+								<li class="clearfix">
+									<i class="pi pi-dollar"></i>
+									<span class="project-title">Revenue</span>
+									<span class="project-detail">+20%</span>
+									<div class="project-progressbar">
+										<div class="project-progressbar-value" style="width: 20%"></div>
+									</div>
+								</li>
+								<li class="clearfix">
+									<i class="pi pi-money-bill"></i>
+									<span class="project-title">Payments</span>
+									<span class="project-detail">24 new</span>
+									<div class="project-progressbar">
+										<div class="project-progressbar-value" style="width: 65%"></div>
+									</div>
+								</li>
+								<li class="clearfix">
+									<i class="pi pi-users"></i>
+									<span class="project-title">Clients</span>
+									<span class="project-detail">+80%</span>
+									<div class="project-progressbar">
+										<div class="project-progressbar-value" style="width: 80%"></div>
+									</div>
+								</li>
+								<li class="clearfix">
+									<i class="pi pi-money-bill"></i>
+									<span class="project-title">Sales</span>
+									<span class="project-detail">+45</span>
+									<div class="project-progressbar">
+										<div class="project-progressbar-value" style="width: 45%"></div>
+									</div>
+								</li>
+								<li class="clearfix">
+									<i class="pi pi-chart-bar"></i>
+									<span class="project-title">Performance</span>
+									<span class="project-detail">+75</span>
+									<div class="project-progressbar">
+										<div class="project-progressbar-value" style="width: 75%"></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="p-col-12 p-md-6 p-lg-4 task-list">
+				<div class="card card-w-title tasks">
+					<h1>Tasks</h1>
+					<ul>
+						<li>
+							<Checkbox name="task" value="reports" v-model="tasksCheckbox"/>
+							<span>Sales Reports</span>
+							<span class="task-badge red"></span>
+						</li>
+						<li>
+							<Checkbox name="task" value="pay" v-model="tasksCheckbox"/>
+							<span>Pay Invoices</span>
+							<span class="task-badge orange"></span>
+						</li>
+						<li>
+							<Checkbox name="task" value="dinner" v-model="tasksCheckbox"/>
+							<span>Kate's Birthday</span>
+							<span class="task-badge orange"></span>
+						</li>
+						<li>
+							<Checkbox name="task" value="meeting" v-model="tasksCheckbox"/>
+							<span>Client Meeting</span>
+							<span class="task-badge green"></span>
+						</li>
+						<li>
+							<Checkbox name="task" value="theme" v-model="tasksCheckbox"/>
+							<span>New Themes</span>
+							<span class="task-badge green"></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="p-col-12 p-md-12 p-lg-4">
+				<div class="card card-w-title resolution-center p-fluid">
+					<h1>Support Request</h1>
+					<label htmlFor="resolution-username">Username</label>
+					<InputText id="resolution-username" type="text" placeholder="Username"/>
+
+					<label htmlFor="resolution-message">Message</label>
+					<Textarea id="resolution-message" type="text" placeholder="Message"></Textarea>
+
+					<div class="resolution-button-bar">
+						<Button type="button" label="Save Draft" class="p-button-secondary" icon="pi pi-plus"/>
+						<Button type="button" label="Send" icon="pi pi-check"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="p-col-12 p-md-12 p-lg-4">
+				<div class="card card-w-title team">
+					<h1>Team</h1>
+					<ul>
+						<li>
+							<img src="assets/layout/images/avatar.png" alt="babylon-layout"/>
+							<div class="team-box">
+								<span class="team-member">Arlene Welch</span>
+								<span class="team-member-role">Design</span>
+							</div>
+							<button class="p-link">
+								<i class="pi pi-comment"></i>
+							</button>
+							<button class="p-link">
+								<i class="pi pi-share-alt"></i>
+							</button>
+						</li>
+						<li>
+							<img src="assets/layout/images/avatar-john.png" alt="babylon-layout"/>
+							<div class="team-box">
+								<span class="team-member">John Swisher</span>
+								<span class="team-member-role">Development</span>
+							</div>
+							<button class="p-link">
+								<i class="pi pi-comment"></i>
+							</button>
+							<button class="p-link">
+								<i class="pi pi-share-alt"></i>
+							</button>
+						</li>
+						<li>
+							<img src="assets/layout/images/avatar-julia.png" alt="babylon-layout"/>
+							<div class="team-box">
+								<span class="team-member">Warren Shaw</span>
+								<span class="team-member-role">Sales</span>
+							</div>
+							<button class="p-link">
+								<i class="pi pi-comment"></i>
+							</button>
+							<button class="p-link">
+								<i class="pi pi-share-alt"></i>
+							</button>
+						</li>
+						<li>
+							<img src="assets/layout/images/avatar-kevin.png" alt="babylon-layout"/>
+							<div class="team-box">
+								<span class="team-member">Kevin Lane</span>
+								<span class="team-member-role">Marketing</span>
+							</div>
+							<button class="p-link">
+								<i class="pi pi-comment"></i>
+							</button>
+							<button class="p-link">
+								<i class="pi pi-share-alt"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="p-col-12 p-xl-6">
+				<div class="card card-w-title timeline">
+					<h1>Timeline</h1>
+					<ul>
+						<li>
+							<div class="activity-link"></div>
+							<div class="timeline-icon">
+								<i class="pi pi-globe"></i>
+							</div>
+							<div class="timeline-content">
+								<h3>Notes Added</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean blandit tortor a
+									ipsum vehicula,
+									in semper sapien auctor.</p>
+								<div class="timeline-footer">
+									<i class="pi pi-clock"></i>
+									<span>3 Sep 2018 at 10:41</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="activity-link"></div>
+							<div class="timeline-icon">
+								<i class="pi pi-calendar"></i>
+							</div>
+							<div class="timeline-content">
+								<h3>Reminder Scheduled</h3>
+								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+									doloremque laudantium,
+									totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+									architecto beatae vitae dicta sunt explicabo.</p>
+								<div class="timeline-footer">
+									<i class="pi pi-clock"></i>
+									<span>4 Sep 2018 at 11:30</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="activity-link"></div>
+							<div class="timeline-icon">
+								<i class="pi pi-image"></i>
+							</div>
+							<div class="timeline-content">
+								<div class="child">
+									<div>
+										<span>3 Photos Added to</span>
+										<span class="colorful">Album-23</span>
+									</div>
+									<img src="assets/layout/images/dashboard/image-1.png" alt="babylon-layout"/>
+									<img src="assets/layout/images/dashboard/image-2.png" alt="babylon-layout"/>
+									<img src="assets/layout/images/dashboard/image-3.png" alt="babylon-layout"/>
+									<div class="timeline-footer">
+										<i class="pi pi-clock"></i>
+										<span>9 Sep 2018 at 00:44</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="activity-link"></div>
+							<div class="timeline-icon">
+								<i class="pi pi-image"></i>
+							</div>
+							<div class="timeline-content">
+								<div class="child">
+									<h3>Location Update</h3>
+									<img src="assets/layout/images/dashboard/antalya.png" alt="babylon-layout" style="width:100%"/>
+									<div class="timeline-footer">
+										<i class="pi pi-clock"></i>
+										<span>16 Sep 2018 at 20:02</span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="p-col-12 p-xl-6">
+				<div class="card card-w-title global-sales p-fluid">
+					<h1>Global Sales</h1>
+					<DataTable :value="cars" class="p-datatable-responsive" :selection.sync="selectedCar" selectionMode="single" dataKey="vin" :rows="5"
+								:paginator="true" style="margin-bottom: 20px">
+						<Column header="Logo">
+							<template #body="slotProps">
+								<img :src="'assets/demo/images/car/' + slotProps.data.brand + '.png'" :alt="slotProps.data.brand"  width="50px"/>
+							</template>
+						</Column>
+						<Column field="vin" header="Vin" :sortable="true"></Column>
+						<Column field="year" header="Year" :sortable="true"></Column>
+						<Column field="brand" header="Brand" :sortable="true"></Column>
+						<Column field="color" header="Color" :sortable="true"></Column>
+						<Column header="View">
+							<template #body="slotProps">
+								<div class="p-grid">
+									<div class="p-col-6">
+										<Button type="button" icon="pi pi-search" class="p-button-info" style="margin-right: .5em"></Button>
+									</div>
+									<div class="p-col-6">
+										<Button type="button" icon="pi pi-times" class="p-button-danger"></Button>
+									</div>
+								</div>
+							</template>
+						</Column>
+					</DataTable>
+				</div>
+				<div class="card card-w-title live-support">
+					<h1>Live Support</h1>
+					<ul>
+						<li>
+							<div class="p-grid">
+								<div class="p-col-fixed">
+									<img src="assets/layout/images/avatar-john.png" alt="babylon-layout"/>
+								</div>
+								<div class="p-col">
+									<div class="chat-message">Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit.
+										Nam ac euismod justo, eget blandit purus.
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="p-grid">
+								<div class="p-col">
+									<div class="chat-message">Mauris malesuada quis risus ut consequat.
+										Maecenas ornare nunc risus, pulvinar euismod mi pellentesque eget.
+									</div>
+								</div>
+								<div class="p-col-fixed">
+									<img src="assets/layout/images/avatar-julia.png" alt="babylon-layout"/>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="p-grid">
+								<div class="p-col-fixed">
+									<img src="assets/layout/images/avatar-john.png" alt="babylon-layout"/>
+								</div>
+								<div class="p-col">
+									<div class="chat-message">Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit.
+										Nam ac euismod justo, eget blandit purus.
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="new-message">
+						<div class="p-grid p-nogutter">
+							<div class="p-col">
+								<InputText type="text" placeholder="Write a message.."/>
+							</div>
+							<div class="p-col-fixed">
+								<Button label="Send"></Button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="p-col-12 p-md-12 p-lg-12">
+				<div class="card card-w-title">
+					<h1>Schedule</h1>
+					<FullCalendar :events="events" :options="options"/>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -270,18 +421,89 @@ import interactionPlugin from '@fullcalendar/interaction';
 export default {
 	data() {
 		return {
-			tasksCheckbox: [],
-			dropdownCities: [
-				{name: 'New York', code: 'NY'},
-				{name: 'Rome', code: 'RM'},
-				{name: 'London', code: 'LDN'},
-				{name: 'Istanbul', code: 'IST'},
-				{name: 'Paris', code: 'PRS'}
+			chartData: {
+				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				datasets: [{
+					label: 'Sales',
+					data: [12, 19, 3, 5, 2, 3, 9],
+					borderColor: [
+						'#7E57C2',
+					],
+					borderWidth: 3,
+					borderDash: [5, 5],
+					fill: false,
+					pointRadius: 3
+				}, {
+					label: 'Income',
+					data: [1, 2, 5, 3, 12, 7, 15],
+					backgroundColor: [
+						'rgba(187,222,251,0.2)',
+					],
+					borderColor: [
+						'#42A5F5',
+					],
+					borderWidth: 3,
+					fill: true
+				},
+					{
+						label: 'Expenses',
+						data: [7, 12, 15, 5, 3, 13, 21],
+						borderColor: [
+							'#FFB300',
+						],
+						borderWidth: 3,
+						fill: false,
+						pointRadius: [4, 6, 4, 12, 8, 0, 4]
+					},
+					{
+						label: 'New Users',
+						data: [3, 7, 2, 17, 15, 13, 19],
+						borderColor: [
+							'#66BB6A',
+						],
+						borderWidth: 3,
+						fill: false
+					}]
+			},
+			chartOptions: {
+				responsive: true,
+				hover: {
+					mode: 'index'
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Month'
+						}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Value'
+						}
+					}]
+				}
+			},
+			menuItems: [
+				{
+					label: 'Save', icon: 'fa fa-fw fa-check'
+				},
+				{
+					label: 'Update', icon: 'fa fa-fw fa-refresh'
+				},
+				{
+					label: 'Delete', icon: 'fa fa-fw fa-trash'
+				}
 			],
-			dropdownCity: null,
+			tasksCheckbox: [],
+			cars: null,
+			selectedCar: null,
 			options: {
-				plugins:[dayGridPlugin, timeGridPlugin, interactionPlugin],
-				defaultDate: '2019-01-01',
+				plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
+				defaultDate: '2016-01-12',
 				header: {
 					left: 'prev,next',
 					center: 'title',
@@ -290,27 +512,6 @@ export default {
 				editable: true
 			},
 			events: null,
-			dataTableCars: null,
-			dataTableSelectedCar: null,
-			lineData: {
-				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-				datasets: [
-					{
-						label: 'First Dataset',
-						data: [65, 59, 80, 81, 56, 55, 40],
-						fill: false,
-						backgroundColor: '#2f4860',
-						borderColor: '#2f4860'
-					},
-					{
-						label: 'Second Dataset',
-						data: [28, 48, 40, 19, 86, 27, 90],
-						fill: false,
-						backgroundColor: '#00bb7e',
-						borderColor: '#00bb7e'
-					}
-				]
-			},
 		}
 	},
 	carService: null,
@@ -320,16 +521,13 @@ export default {
 		this.eventService = new EventService();
 	},
 	mounted() {
-		this.carService.getCarsSmall().then(data => this.dataTableCars = data);
+		this.carService.getCarsMedium().then(data => this.cars = data);
 		this.eventService.getEvents().then(data => this.events = data);
-
-		let afId = this.$route.query['af_id'];
-        if (afId) {
-            let today = new Date();
-            let expire = new Date();
-            expire.setTime(today.getTime() + 3600000*24*7);
-            document.cookie = 'primeaffiliateid=' + afId + ';expires=' + expire.toUTCString() + ';path=/; domain:primefaces.org';
-        }
+	},
+	methods: {
+		toggle(event) {
+			this.$refs.menu.toggle(event);
+		}
 	}
 }
 </script>

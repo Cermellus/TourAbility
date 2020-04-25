@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Dashboard from './components/Dashboard.vue';
 
 Vue.use(Router);
 
@@ -9,7 +8,8 @@ export default new Router({
 		{
 			path: '/',
 			name: 'dashboard',
-			component: Dashboard
+			exact: true,
+			component: () => import('./components/Dashboard.vue')
 		},
 		{
 			path: '/sample',
@@ -38,24 +38,9 @@ export default new Router({
 		},
 		{
 			path: '/menus',
-            component: () => import('./components/MenusDemo.vue'),
-            children: [{
-                path: '',
-                component: () => import('./components/menu/PersonalDemo.vue')
-            },
-            {
-                path: '/menus/seat',
-                component: () => import('./components/menu/SeatDemo.vue')
-            },
-            {
-                path: '/menus/payment',
-                component: () => import('./components/menu/PaymentDemo.vue')
-            },
-            {
-                path: '/menus/confirmation',
-                component: () => import('./components/menu/ConfirmationDemo.vue')
-            }]
-        },
+			name: 'menus',
+			component: () => import('./components/MenusDemo.vue')
+		},
 		{
 			path: '/messages',
 			name: 'messages',

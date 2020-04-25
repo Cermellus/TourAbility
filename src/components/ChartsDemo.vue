@@ -1,5 +1,4 @@
 <template>
-
 	<div class="p-grid p-fluid">
 		<div class="p-col-12 p-lg-6">
 			<div class="card">
@@ -47,15 +46,13 @@ export default {
 						label: 'First Dataset',
 						data: [65, 59, 80, 81, 56, 55, 40],
 						fill: false,
-						backgroundColor: '#2f4860',
-						borderColor: '#2f4860'
+						borderColor: '#03A9F4'
 					},
 					{
 						label: 'Second Dataset',
 						data: [28, 48, 40, 19, 86, 27, 90],
 						fill: false,
-						backgroundColor: '#00bb7e',
-						borderColor: '#00bb7e'
+						borderColor: '#FFC107'
 					}
 				]
 			},
@@ -65,17 +62,16 @@ export default {
 					{
 						data: [300, 50, 100],
 						backgroundColor: [
-							"#FF6384",
-							"#36A2EB",
-							"#FFCE56"
+							"#FFC107",
+							"#03A9F4",
+							"#4CAF50"
 						],
 						hoverBackgroundColor: [
-							"#FF6384",
-							"#36A2EB",
-							"#FFCE56"
+							"#FFE082",
+							"#81D4FA",
+							"#A5D6A7"
 						]
-					}
-				]
+					}]
 			},
 			polarData: {
 				datasets: [{
@@ -87,20 +83,20 @@ export default {
 						14
 					],
 					backgroundColor: [
-						"#FF6384",
-						"#4BC0C0",
-						"#FFCE56",
-						"#E7E9ED",
-						"#36A2EB"
+						"#FFC107",
+						"#03A9F4",
+						"#4CAF50",
+						"#E91E63",
+						"#9C27B0"
 					],
 					label: 'My dataset'
 				}],
 				labels: [
-					"Red",
-					"Green",
 					"Yellow",
-					"Grey",
-					"Blue"
+					"Blue",
+					"Green",
+					"Pink",
+					"Purple"
 				]
 			},
 			barData: {
@@ -108,12 +104,14 @@ export default {
 				datasets: [
 					{
 						label: 'My First dataset',
-						backgroundColor: '#2f4860',
+						backgroundColor: '#03A9F4',
+						borderColor: '#03A9F4',
 						data: [65, 59, 80, 81, 56, 55, 40]
 					},
 					{
 						label: 'My Second dataset',
-						backgroundColor: '#00bb7e',
+						backgroundColor: '#FFC107',
+						borderColor: '#FFC107',
 						data: [28, 48, 40, 19, 86, 27, 90]
 					}
 				]
@@ -124,17 +122,16 @@ export default {
 					{
 						data: [300, 50, 100],
 						backgroundColor: [
-							"#FF6384",
-							"#36A2EB",
-							"#FFCE56"
+							"#FFC107",
+							"#03A9F4",
+							"#4CAF50"
 						],
 						hoverBackgroundColor: [
-							"#FF6384",
-							"#36A2EB",
-							"#FFCE56"
+							"#FFE082",
+							"#81D4FA",
+							"#A5D6A7"
 						]
-					}
-				]
+					}]
 			},
 			radarData: {
 				labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],

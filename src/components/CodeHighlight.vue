@@ -5,6 +5,7 @@
 
 <script>
 import Prism from 'prismjs';
+import 'prismjs/themes/prism-coy.css';
 
 export default {
     props: {

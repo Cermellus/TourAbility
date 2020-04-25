@@ -1,13 +1,13 @@
 <template>
-	<div class="p-grid">
-		<div class="p-col-6 p-fluid">
+	<div class="p-grid p-fluid">
+		<div class="p-col-6">
             <div class="card">
 				<h1>Overlay Panel</h1>
 				<div class="p-grid">
 					<div class="p-col-6">
 						<Button type="button" label="Image" @click="toggle" />
 						<OverlayPanel ref="op" appendTo="body" :showCloseIcon="true">
-							<img src="assets/layout/images/nature/nature1.jpg" alt="Nature 1" />
+							<img src="assets/demo/images/nature/nature1.jpg" alt="Nature 1" />
 						</OverlayPanel>
 					</div>
 					<div class="p-col-6">
@@ -24,7 +24,7 @@
 				</div>
 			</div>
 		</div>
-        <div class="p-col-6 p-fluid">
+        <div class="p-col-6">
 			<div class="card">
 				<h1>Dialog</h1>
 				<Dialog header="Godfather I" :visible.sync="display" :style="{width: '30vw'}" :modal="true">
@@ -40,31 +40,6 @@
 					</template>
 				</Dialog>
 				<Button label="Show" icon="pi pi-external-link" @click="open"/>
-			</div>
-		</div>
-        <div class="p-col-12">
-			<div class="card">
-				<h1>Tooltip</h1>
-                <div class="p-grid p-fluid">
-                    <div class="p-col-12 p-md-3">
-                        <InputText type="text" placeholder="Right" v-tooltip.right="'Enter your username'" />
-                    </div>
-                    <div class="p-col-12 p-md-3">
-                        <InputText type="text" placeholder="Top" v-tooltip.top="'Enter your username'" />
-                    </div>
-                    <div class="p-col-12 p-md-3">
-                        <InputText type="text" placeholder="Bottom" v-tooltip.bottom="'Enter your username'" />
-                    </div>
-                    <div class="p-col-12 p-md-3">
-                        <InputText type="text" placeholder="Left" v-tooltip.left="'Enter your username'" />
-                    </div>
-                </div>
-
-                <h3>Focus and Blur</h3>
-                <InputText type="text" placeholder="Focus" v-tooltip.bottom.focus="'Enter your username'" />
-
-                <h3>Button</h3>
-                <Button type="button" label="Save" icon="pi pi-check" v-tooltip="'Click to proceed'" />
 			</div>
 		</div>
 	</div>
@@ -105,8 +80,5 @@ export default {
 </script>
 
 <style scoped>
-p {
-    line-height: 1.5;
-    margin: 0;
-}
+
 </style>

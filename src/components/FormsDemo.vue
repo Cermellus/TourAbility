@@ -5,22 +5,22 @@
 				<h1>InputText</h1>
 				<div class="p-grid">
 					<div class="p-col-12 p-md-4">
-						<InputText placeholder="Name"/>
+						<InputText type="text" v-model="textValue1" placeholder="Name"/>
 					</div>
 					<div class="p-col-12 p-md-4">
-						<InputText placeholder="Email"/>
+						<InputText type="text" v-model="textValue2" placeholder="Email"/>
 					</div>
 					<div class="p-col-12 p-md-4">
-						<InputText placeholder="Phone"/>
+						<InputText type="text" v-model="textValue3" placeholder="Phone"/>
 					</div>
 					<div class="p-col-12 p-md-4">
-						<InputText placeholder="Address" />
+						<InputText type="text" v-model="textValue4" placeholder="Address"/>
 					</div>
 					<div class="p-col-12 p-md-4">
-						<InputText placeholder="Disabled" disabled />
+						<InputText :disabled="true" type="text" v-model="textValue5" placeholder="Disabled"/>
 					</div>
 					<div class="p-col-12 p-md-4">
-						<InputText placeholder="Error" class="p-error"/>
+						<InputText class="p-error" placeholder="Invalid" type="text" v-model="textValue6"/>
 					</div>
 				</div>
 			</div>
@@ -32,12 +32,12 @@
 
 			<div class="card card-w-title">
 				<h1>AutoComplete</h1>
-				<div class="p-grid">
+				<div class="p-grid form-group">
 					<div class="p-col-12">
 						<label htmlFor="acSimple">Simple</label>
 					</div>
-					<div class="p-col-12">
-						<AutoComplete v-model="selectedCountry" :suggestions="filteredCountriesBasic" @complete="searchCountryBasic($event)" field="name" />
+					<div class="p-col-12" style="margin-bottom:10px">
+						<AutoComplete v-model="selectedCountry" placeholder="Countries" :suggestions="filteredCountriesBasic" @complete="searchCountryBasic($event)" field="name" />
 					</div>
 					<div class="p-col-12">
 						<label htmlFor="acAdvanced">Advanced</label>
@@ -46,7 +46,7 @@
 						<AutoComplete v-model="brand" :suggestions="filteredBrands" @complete="searchBrand($event)" placeholder="Hint: type 'v' or 'f'" :dropdown="true">
 							<template #item="slotProps">
 								<div class="p-clearfix p-autocomplete-brand-item">
-									<img :alt="slotProps.item" :src="'assets/layout/images/car/' + slotProps.item + '.png'" width="32" style="display: inline-block; margin: 5px 0 2px 5px"/>
+									<img :alt="slotProps.item" :src="'assets/demo/images/car/' + slotProps.item + '.png'" width="32" style="display: inline-block; margin: 5px 0 2px 5px"/>
 									<div style="font-size: 18px; float: right; margin: 10px 10px 0 0">{{slotProps.item}}</div>
 								</div>
 							</template>
@@ -56,15 +56,10 @@
 			</div>
 
 			<div class="card card-w-title">
-				<h1>MultiSelect</h1>
-				<MultiSelect v-model="multiselectedCars" :options="multiselectCars" optionLabel="brand" placeholder="Select Brands" />
-			</div>
-
-			<div class="card card-w-title">
 				<h1>Calendar</h1>
 				<Calendar v-model="date1" :inline="true"/>
 
-				<div class="p-grid-m" style="margin-top: 20px">
+				<div class="p-grid form-group" style="margin-top: 20px">
 					<div class="p-col-12">
 						<Calendar placeholder="Popup" v-model="date2"/>
 					</div>
@@ -90,7 +85,7 @@
 		<div class="p-col-12 p-lg-6">
 			<div class="card card-w-title">
 				<h1>Checkboxes</h1>
-				<div class="p-grid">
+				<div class="p-grid form-group">
 					<div class="p-col-12 p-md-4">
 						<Checkbox id="theme1" name="theme" value="Ultima" v-model="themesCheckbox" />
 						<label for="theme1" class="p-checkbox-label">Ultima</label>
@@ -104,11 +99,9 @@
 						<label for="theme3" class="p-checkbox-label">Serenity</label>
 					</div>
 				</div>
-			</div>
 
-			<div class="card card-w-title">
 				<h1>RadioButtons</h1>
-				<div class="p-grid">
+				<div class="p-grid form-group">
 					<div class="p-col-12 p-md-4">
 						<RadioButton id="themeR1" name="theme" value="Ultima" v-model="themesRadioButton" />
 						<label for="themeR1" class="p-radiobutton-label">Ultima</label>
@@ -125,13 +118,16 @@
 			</div>
 
 			<div class="card card-w-title">
-				<h1>InputSwitch</h1>
-				<InputSwitch v-model="switchValue" />
+				<h1>Dropdown</h1>
+				<Dropdown v-model="dropdownCity" :options="dropdownCities" optionLabel="name" placeholder="Select a City" />
+
+				<h1>MultiSelect</h1>
+				<MultiSelect v-model="multiselectedCars" :options="multiselectCars" optionLabel="brand" placeholder="Select Brands" />
 			</div>
 
 			<div class="card card-w-title">
-				<h1>Dropdown</h1>
-				<Dropdown v-model="dropdownCity" :options="dropdownCities" optionLabel="name" placeholder="Select a City" />
+				<h1>ListBox</h1>
+				<Listbox v-model="listboxCity" :options="listboxCities" optionLabel="name" :filter="true"/>
 			</div>
 
 			<div class="card card-w-title">
@@ -145,18 +141,18 @@
 			</div>
 
 			<div class="card card-w-title">
-				<h1>Slider</h1>
-				<Slider v-model="sliderValue" :range="true" />
-			</div>
-
-			<div class="card card-w-title">
-				<h1>ListBox</h1>
-				<Listbox v-model="listboxCity" :options="listboxCities" optionLabel="name" :filter="true"/>
-			</div>
-
-			<div class="card card-w-title">
 				<h1>Rating</h1>
 				<Rating v-model="ratingValue" />
+			</div>
+
+			<div class="card card-w-title">
+				<h1>InputSwitch</h1>
+				<InputSwitch v-model="switchValue" />
+			</div>
+
+			<div class="card card-w-title">
+				<h1>Slider</h1>
+				<Slider v-model="sliderValue" :range="true" />
 			</div>
 
 			<div class="card card-w-title">
@@ -168,17 +164,17 @@
 		<div class="p-col-12">
 			<div class="card card-w-title">
 				<h1>Input Groups</h1>
-				<div class="p-grid">
+				<div class="p-grid form-group">
 					<div class="p-col-12 p-md-6">
 						<div class="p-inputgroup">
-							<span class="p-inputgroup-addon"><i class="pi pi-user" /></span>
+							<span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
 							<InputText placeholder="Username"/>
 						</div>
 					</div>
 
 					<div class="p-col-12 p-md-6">
 						<div class="p-inputgroup">
-							<span class="p-inputgroup-addon"><i class="pi pi-clock" /></span>
+							<span class="p-inputgroup-addon"><i class="pi pi-clock"></i></span>
 							<span class="p-inputgroup-addon"><i class="pi pi-star"></i></span>
 							<InputText placeholder="Payment"/>
 							<span class="p-inputgroup-addon">$</span>
@@ -195,9 +191,9 @@
 
 					<div class="p-col-12 p-md-6">
 						<div class="p-inputgroup">
-                                    <span class="p-inputgroup-addon p-inputgroup-addon-checkbox">
-										<Checkbox v-model="inputGroupValue" :binary="true" />
-                                    </span>
+							<span class="p-inputgroup-addon p-inputgroup-addon-checkbox">
+								<Checkbox v-model="inputGroupValue" :binary="true"/>
+							</span>
 							<InputText placeholder="Confirm"/>
 						</div>
 					</div>
@@ -226,7 +222,7 @@
 
 							<div class="p-col-12">SelectButton</div>
 							<div class="p-col-12">
-								<SelectButton v-model="selectButtonValue" :options="selectButtonValues" optionLabel="name" />
+								<SelectButton v-model="selectButtonValue" :options="selectButtonValues" optionLabel="name" class="p-buttonset-3" />
 							</div>
 
 							<div class="p-col-12">Button</div>
@@ -263,7 +259,6 @@
 					<div class="card card-w-title">
 						<h1>Colored Buttons</h1>
 						<p>Flat buttons with various color alternatives.</p>
-
 						<div class="p-grid">
 							<div class="p-col-12 p-md-4" style="text-align: center">
 								<Button label="Primary" style="margin-bottom: 10px" />
@@ -274,7 +269,7 @@
 								<Button label="Danger" style="margin-bottom: 10px" class="p-button-danger" />
 							</div>
 							<div class="p-col-12 p-md-4" style="text-align: center">
-								<Button label="Primary" style="margin-bottom: 10px" class="p-button-raised"/>
+								<Button label="Primary" style="margin-bottom: 10px" class="p-button-raised" />
 								<Button label="Secondary" style="margin-bottom: 10px" class="p-button-secondary p-button-raised" />
 								<Button label="Success" style="margin-bottom: 10px" class="p-button-success p-button-raised" />
 								<Button label="Info" style="margin-bottom: 10px" class="p-button-info p-button-raised" />
@@ -282,7 +277,7 @@
 								<Button label="Danger" style="margin-bottom: 10px" class="p-button-danger p-button-raised" />
 							</div>
 							<div class="p-col-12 p-md-4" style="text-align: center">
-								<Button label="Primary" style="margin-bottom: 10px"  class="p-button-rounded"/>
+								<Button label="Primary" style="margin-bottom: 10px" class="p-button-rounded"/>
 								<Button label="Secondary" style="margin-bottom: 10px" class="p-button-secondary p-button-rounded" />
 								<Button label="Success" style="margin-bottom: 10px" class="p-button-success p-button-rounded" />
 								<Button label="Info" style="margin-bottom: 10px" class="p-button-info p-button-rounded" />
@@ -304,6 +299,18 @@ import CountryService from '../service/CountryService'
 export default {
 	data(){
 		return {
+			textValue1: '',
+			textValue2: '',
+			textValue3: '',
+			textValue4: '',
+			textValue5: '',
+			textValue6: '',
+			textValue7: '',
+			textValue8: '',
+			textValue9: '',
+			textValue10: '',
+			textValue11: '',
+			textValue12: '',
 			countries: null,
 			selectedCountry: null,
 			filteredCountriesBasic: null,
@@ -363,22 +370,9 @@ export default {
 			],
 			selectButtonValue: null,
 			splitItems: [
-				{
-					label: 'Update',
-					icon: 'pi pi-refresh'
-				},
-				{
-					label: 'Delete',
-					icon: 'pi pi-times'
-				},
-				{
-					label: 'Vue Website',
-					icon: 'pi pi-external-link'
-				},
-				{
-					label: 'Upload',
-					icon: 'pi pi-upload'
-				}
+				{label: 'Update', icon: 'pi pi-refresh'},
+				{label: 'Delete', icon: 'pi pi-times'},
+				{label: 'Home', icon: 'pi pi-home', url: 'http://www.primefaces.org/primevue'}
 			]
 		}
 	},
@@ -388,7 +382,7 @@ export default {
 	},
 	mounted() {
 		this.countryService.getCountries().then(data => this.countries = data);
-		this.brands = ['Audi', 'Bmw', 'Fiat', 'Ford', 'Honda', 'Jaguar', 'Mercedes', 'Renault', 'Volvo'];
+		this.brands = ['Audi', 'BMW', 'Fiat', 'Ford', 'Honda', 'Jaguar', 'Mercedes', 'Renault', 'Volvo'];
 	},
 	methods: {
 		searchCountry(query) {
@@ -420,7 +414,3 @@ export default {
 	}
 }
 </script>
-
-<style scoped>
-
-</style>

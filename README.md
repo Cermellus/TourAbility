@@ -1,4 +1,4 @@
-# sigma
+# babylon
 
 ## Project setup
 ```

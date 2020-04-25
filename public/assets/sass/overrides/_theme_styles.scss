@@ -1,0 +1,88 @@
+/* Add your customizations of the theme here */
+.layout-mask {
+  z-index: 996;
+}
+
+.layout-wrapper {
+  .layout-menu-container {
+    .layout-profile {
+
+      .layout-profile-menu {
+        max-height: 450px;
+      }
+    }
+  }
+
+  &.layout-menu-light {
+    .layout-menu-container {
+      background-color: $menuBgColor;
+
+      .layout-menu {
+        > li {
+          > a {
+            > span {
+              color: $primaryTextColor !important;
+            }
+
+            > i {
+              color: $primaryTextColor !important;
+            }
+          }
+        }
+      }
+    }
+
+    &.layout-mobile-active {
+      .layout-menu-container {
+        background-color: $menuBgColor;
+        z-index: 999;
+        text-align: left;
+      }
+
+
+      .layout-menu {
+        > li {
+          > div {
+            color: $menuitemTextColor;
+            font-weight: 700;
+          }
+
+          > a {
+            > span {
+              color: $menuitemTextColor;
+              font-weight: 700;
+            }
+
+            > i {
+              color: $menuitemIconColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 897px) {
+  .layout-wrapper {
+    &.layout-horizontal {
+      .layout-menu-container {
+        width: 50%!important;
+        top: 7px!important;
+        left: 200px;
+        -webkit-box-shadow: none!important;
+        box-shadow: none!important;
+      }
+
+      .layout-main {
+        padding-top: 60px!important;
+      }
+
+      &.layout-menu-light {
+        .layout-menu-container {
+          border-bottom: transparent!important;
+          background-color: transparent!important;
+        }
+      }
+    }
+  }
+}
