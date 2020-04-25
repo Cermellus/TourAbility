@@ -32,7 +32,8 @@
 					<i class="overview-icon pi pi-users"></i>
 					<span class="overview-title">Users</span>
 					<i class="overview-arrow pi pi-chevron-circle-up"></i>
-					<div class="overview-numbers">
+					<div class="overview-numbers
+">
 						9522
 					</div>
 					<div class="overview-subinfo">

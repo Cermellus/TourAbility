@@ -25,7 +25,7 @@
 			<li v-if="profileMode === 'popup' || horizontal" :class="['user-profile', {'active-topmenuitem': activeTopbarItem === 'profile'}]"
 				@click="$emit('topbar-item-click',{originalEvent:$event,item:'profile'})">
 				<button class="p-link">
-					<img alt="babylon-layout" src="assets/layout/images/avatar_1.png"/>
+					<img alt="babylon-layout" src="assets/layout/images/avatar.png"/>
 					<span class="topbar-item-name">Arlene Welch</span>
 				</button>
 

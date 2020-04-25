@@ -1,7 +1,7 @@
 <template>
     <div class="user-card card">
         <div class="user-card-header">
-            <img src="assets/layout/images/avatar_1.png" alt="babylon-layout"/>
+            <img src="assets/layout/images/avatar.png" alt="babylon-layout"/>
         </div>
         <div class="user-card-content">
             <div class="user-card-name">
@@ -9,56 +9,50 @@
             </div>
 
             <div class="user-detail">
-                <ul>
-                    <li class="clearfix">
-                        <i class="pi pi-list"></i>
-                        <span class="project-title">Tasks</span>
-                        <span class="project-detail">3 open</span>
-                        <div class="project-progressbar">
-                            <div class="project-progressbar-value" style="width: 50%"></div>
-                        </div>
-                    </li>
-                    <li class="clearfix">
-                        <i class="pi pi-dollar"></i>
-                        <span class="project-title">Revenue</span>
-                        <span class="project-detail">+20%</span>
-                        <div class="project-progressbar">
-                            <div class="project-progressbar-value" style="width: 20%"></div>
-                        </div>
-                    </li>
-                    <li class="clearfix">
-                        <i class="pi pi-money-bill"></i>
-                        <span class="project-title">Payments</span>
-                        <span class="project-detail">24 new</span>
-                        <div class="project-progressbar">
-                            <div class="project-progressbar-value" style="width: 65%"></div>
-                        </div>
-                    </li>
-                    <li class="clearfix">
-                        <i class="pi pi-users"></i>
-                        <span class="project-title">Clients</span>
-                        <span class="project-detail">+80%</span>
-                        <div class="project-progressbar">
-                            <div class="project-progressbar-value" style="width: 80%"></div>
-                        </div>
-                    </li>
-                    <li class="clearfix">
-                        <i class="pi pi-money-bill"></i>
-                        <span class="project-title">Sales</span>
-                        <span class="project-detail">+45</span>
-                        <div class="project-progressbar">
-                            <div class="project-progressbar-value" style="width: 45%"></div>
-                        </div>
-                    </li>
-                    <li class="clearfix">
-                        <i class="pi pi-chart-bar"></i>
-                        <span class="project-title">Performance</span>
-                        <span class="project-detail">+75</span>
-                        <div class="project-progressbar">
-                            <div class="project-progressbar-value" style="width: 75%"></div>
-                        </div>
-                    </li>
-                </ul>
+                <div class="overview-box sales">
+                    <i class="overview-icon pi pi-dollar"></i>
+                    <span class="overview-title">Sales</span>
+                    <i class="overview-arrow pi pi-chevron-circle-up"></i>
+                    <div class="overview-numbers">
+                        $ 92,440
+                    </div>
+                    <div class="overview-subinfo">
+                        21% more than yesterday
+                    </div>
+                </div>
+                <div class="overview-box views">
+                    <i class="overview-icon pi pi-search"></i>
+                    <span class="overview-title">Views</span>
+                    <i class="overview-arrow pi pi-chevron-circle-up"></i>
+                    <div class="overview-numbers">
+                        7029
+                    </div>
+                    <div class="overview-subinfo">
+                        2% more than yesterday
+                    </div>
+                </div>
+                <div class="overview-box users">
+                    <i class="overview-icon pi pi-users"></i>
+                    <span class="overview-title">Users</span>
+                    <i class="overview-arrow pi pi-chevron-circle-up"></i>
+                    <div class="overview-numbers">
+                        9522
+                    </div>
+                    <div class="overview-subinfo">
+                        7% more than yesterday
+                    </div>
+                </div>
+                <div class="overview-box checkin">
+                    <i class="overview-icon pi pi-map-marker"></i>
+                    <span class="overview-title">Check-Ins</span>
+                    <i class="overview-arrow pi pi-chevron-circle-up"></i>
+                    <div class="overview-numbers">
+                        4211
+                    </div>
+                    <div class="overview-subinfo">
+                        18% more than yesterday
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -89,6 +83,7 @@
             height: 220px;
             padding-top: 2em;
             text-align: center;
+
             img {
                 max-width: 150px;
                 height: auto;
@@ -97,9 +92,10 @@
 
         .user-card-content {
             text-align: center;
-            .user-card-name{
+
+            .user-card-name {
                 margin-left: 0;
-                top:-1em;
+                top: -1em;
                 color: #212121;
             }
         }
