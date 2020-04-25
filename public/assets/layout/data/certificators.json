@@ -2,24 +2,16 @@
 	"id": 1,
 	"name": "certificator",
 	"surname": "one",
-	"country": "Italy",
-	"state": "Italy",
-	"region": "Lombardy",
-	"council": "Milan"
+	"society":"turist office"
 }, {
 	"id": 2,
 	"name": "certificator",
 	"surname": "two",
-	"country": "Italy",
-	"state": "Italy",
-	"region": "Lombardy",
-	"council": "Milan"
+	"society":"civil police"
 }, {
 	"id": 3,
 	"name": "certificator",
 	"surname": "three",
-	"country": "Italy",
-	"state": "Italy",
-	"region": "Lombardy",
-	"council": "Milan"
-}]
+	"society":"private"
+},
+]

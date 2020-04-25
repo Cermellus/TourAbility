@@ -12,16 +12,16 @@
 				"level1": {
 					"id": 1,
 					"checklist": [{
-							"point a": true
+							"point a": [true,true]
 						},
 						{
-							"point b": true
+							"point b": [true,true]
 						},
 						{
-							"point c": true
+							"point c": [true,true]
 						},
 						{
-							"point d": true
+							"point d": [true,true]
 						}
 					]
 				},
@@ -31,25 +31,25 @@
 				"level2": {
 					"id": 2,
 					"checklist": [{
-							"point a": true
+							"point a": [true,false]
 						},
 						{
-							"point b": true
+							"point b": [true,false]
 						},
 						{
-							"point c": true
+							"point c": [true,false]
 						},
 						{
-							"point d": true
+							"point d": [true,false]
 						},
 						{
-							"point e": true
+							"point e": [true,false]
 						},
 						{
-							"point f": false
+							"point f": [false,false]
 						},
 						{
-							"point g": false
+							"point g": [false,false]
 						}
 					]
 				},
@@ -59,7 +59,14 @@
 		"landmarks": [
 			1
 		],
-		"image": "structure1"
+		"image": "structure1",
+		"availability":{
+			"2020-07-01":"2020-08-10",
+			"2020-07-20":"2020-08-25",
+			"2020-08-01":"2020-08-10",
+			"2020-08-15":"2020-08-30",
+			"2020-09-05":"2020-09-15",
+		}
 	},
 	{
 		"id": 2,
@@ -75,16 +82,16 @@
 				"level1": {
 					"id": 1,
 					"checklist": [{
-							"point a": true
+							"point a": [true,true]
 						},
 						{
-							"point b": true
+							"point b": [true,true]
 						},
 						{
-							"point c": true
+							"point c": [true,true]
 						},
 						{
-							"point d": true
+							"point d": [true,true]
 						}
 					]
 				},
@@ -94,25 +101,25 @@
 				"level2": {
 					"id": 2,
 					"checklist": [{
-							"point a": true
+							"point a": [true,false]
 						},
 						{
-							"point b": true
+							"point b": [true,false]
 						},
 						{
-							"point c": true
+							"point c": [true,false]
 						},
 						{
-							"point d": true
+							"point d": [true,true]
 						},
 						{
-							"point e": true
+							"point e": [true,true]
 						},
 						{
-							"point f": true
+							"point f": [true,true]
 						},
 						{
-							"point g": true
+							"point g": [true,true]
 						}
 					]
 				},
@@ -120,7 +127,15 @@
 			}
 		],
 		"landmarks": [],
-		"image": "structure2"
+		"image": "structure2",
+		"availability":{
+			"2020-07-01":"2020-08-10",
+			"2020-07-20":"2020-08-25",
+			"2020-08-01":"2020-08-10",
+			"2020-08-15":"2020-08-30",
+			"2020-09-05":"2020-09-15",
+		}
+
 	},
 	{
 		"id": 3,
@@ -134,6 +149,14 @@
 		},
 		"certifications": [],
 		"landmarks": [],
-		"image": "structure3"
+		"image": "structure3",
+		"availability":{
+			"2020-07-01":"2020-08-10",
+			"2020-07-20":"2020-08-25",
+			"2020-08-01":"2020-08-10",
+			"2020-08-15":"2020-08-30",
+			"2020-09-05":"2020-09-15",
+		}
+
 	}
 ]
