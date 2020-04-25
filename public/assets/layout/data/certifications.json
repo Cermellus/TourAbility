@@ -1,0 +1,44 @@
+[{
+		"level1": {
+			"id": 1,
+			"checklist": [
+				"point a",
+				"point b",
+				"point c",
+				"point d"
+			]
+		}
+	},
+	{
+		"level2": {
+			"id": 2,
+			"checklist": [
+				"point a",
+				"point b",
+				"point c",
+				"point d",
+				"point e",
+				"point f",
+				"point g"
+			]
+		}
+	},
+	{
+		"level3": {
+			"id": 3,
+			"checklist": [
+				"point a",
+				"point b",
+				"point c",
+				"point d",
+				"point e",
+				"point f",
+				"point g",
+				"point i",
+				"point j",
+				"point k"
+			]
+		}
+	}
+
+]

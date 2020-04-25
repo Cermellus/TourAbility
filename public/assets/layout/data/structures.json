@@ -1,0 +1,139 @@
+[{
+		"id": 1,
+		"published": true,
+		"name": "structure one",
+		"location": {
+			"country": "Italy",
+			"state": "Italy",
+			"region": "Lombardy",
+			"council": "Milan"
+		},
+		"certifications": [{
+				"level1": {
+					"id": 1,
+					"checklist": [{
+							"point a": true
+						},
+						{
+							"point b": true
+						},
+						{
+							"point c": true
+						},
+						{
+							"point d": true
+						}
+					]
+				},
+				"status": "certified"
+			},
+			{
+				"level2": {
+					"id": 2,
+					"checklist": [{
+							"point a": true
+						},
+						{
+							"point b": true
+						},
+						{
+							"point c": true
+						},
+						{
+							"point d": true
+						},
+						{
+							"point e": true
+						},
+						{
+							"point f": false
+						},
+						{
+							"point g": false
+						}
+					]
+				},
+				"status": "inprogress"
+			}
+		],
+		"landmarks": [
+			1
+		],
+		"image": "structure1"
+	},
+	{
+		"id": 2,
+		"published": true,
+		"name": "structure two",
+		"location": {
+			"country": "Italy",
+			"state": "Italy",
+			"region": "Tuscany",
+			"council": "Florence"
+		},
+		"certifications": [{
+				"level1": {
+					"id": 1,
+					"checklist": [{
+							"point a": true
+						},
+						{
+							"point b": true
+						},
+						{
+							"point c": true
+						},
+						{
+							"point d": true
+						}
+					]
+				},
+				"status": "certified"
+			},
+			{
+				"level2": {
+					"id": 2,
+					"checklist": [{
+							"point a": true
+						},
+						{
+							"point b": true
+						},
+						{
+							"point c": true
+						},
+						{
+							"point d": true
+						},
+						{
+							"point e": true
+						},
+						{
+							"point f": true
+						},
+						{
+							"point g": true
+						}
+					]
+				},
+				"status": "certified"
+			}
+		],
+		"landmarks": [],
+		"image": "structure2"
+	},
+	{
+		"id": 3,
+		"published": false,
+		"name": "structure three",
+		"location": {
+			"country": "Italy",
+			"state": "Italy",
+			"region": "Veneto",
+			"council": "Venetia"
+		},
+		"certifications": [],
+		"landmarks": [],
+		"image": "structure3"
+	}
+]
