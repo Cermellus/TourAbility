@@ -5,12 +5,12 @@
                   :sortOrder="sortOrder" :sortField="sortField">
             <template #header>
                 <div class="p-grid p-nogutter">
-                    <div class="p-col-3" style="text-align: left">
+                    <div class="p-col-4" style="text-align: left">
                         <Dropdown v-model="sortKey" :options="sortOptions" optionLabel="label" placeholder="Sort By"
                                   @change="onSortChange($event)"/>
                     </div>
-                    <div class="table-title p-col-6" style="text-align: center">ACCOMODATIONS</div>
-                    <div class="p-col-3" style="text-align: right">
+                    <div class="table-title p-col-4" style="text-align: center">ACCOMODATIONS</div>
+                    <div class="p-col-4" style="text-align: right">
                         <DataViewLayoutOptions v-model="layout"/>
                     </div>
                 </div>
