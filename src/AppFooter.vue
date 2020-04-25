@@ -6,17 +6,6 @@
 					<img src="assets/layout/images/logo-black.png" alt="babylon-layout"/>
 				</a>
 			</div>
-			<div class="p-col-6 footer-icons">
-				<button class="p-link">
-					<i class="pi pi-home"></i>
-				</button>
-				<button class="p-link">
-					<i class="pi pi-globe"></i>
-				</button>
-				<button class="p-link">
-					<i class="pi pi-envelope"></i>
-				</button>
-			</div>
 		</div>
 	</div>
 </template>

@@ -1,190 +1,225 @@
-[{
-	"id": 1,
-	"published": true,
-	"name": "structure one",
-	"location": {
-		"country": "Italy",
-		"state": "Italy",
-		"region": "Lombardy",
-		"council": "Milan"
-	},
-	"certifications": {
-			"level1": {
-				"id": 1,
-				"checklist": [{
-						"point a": [true,true]
-					},
-					{
-						"point b": [true,true]
-					},
-					{
-						"point c": [true,true]
-					},
-					{
-						"point d": [true,true]
-					}
-				],
-				"status": "certified"
+[
+  {
+    "id": 1,
+    "published": true,
+    "name": "structure one",
+    "location": {
+      "country": "Italy",
+      "state": "Italy",
+      "region": "Lombardy",
+      "council": "Milan"
+    },
+    "certifications": {
+      "level1": {
+        "id": 1,
+        "checklist": [
+          {
+            "name": "point a",
+            "priority": "red",
+            "completato": true,
+            "verificato": true
+          },
+          {
+            "name": "point b",
+            "priority": "orange",
+            "completato": true,
+            "verificato": true
+          },
+          {
+            "name": "point c",
+            "priority": "red",
+            "completato": true,
+            "verificato": true
+          },
+          {
+            "name": "point d",
+            "priority": "green",
+            "completato": true,
+            "verificato": true
+          }
+        ],
+        "status": "certified"
+      },
+      "level2": {
+        "id": 2,
+        "checklist": [
+			{
+				"name": "point a",
+				"priority": "red",
+				"completato": true,
+				"verificato": false
 			},
-			"level2": {
-				"id": 2,
-				"checklist": [{
-						"point a": [true,false]
-					},
-					{
-						"point b": [true,false]
-					},
-					{
-						"point c": [true,false]
-					},
-					{
-						"point d": [true,false]
-					},
-					{
-						"point e": [true,false]
-					},
-					{
-						"point f": [false,false]
-					},
-					{
-						"point g": [false,false]
-					}
-				],
-				"status": "inprogress"
+			{
+				"name": "point b",
+				"priority": "orange",
+				"completato": true,
+				"verificato": false
+			},
+			{
+				"name": "point c",
+				"priority": "red",
+				"completato": true,
+				"verificato": false
+			},
+			{
+				"name": "point d",
+				"priority": "green",
+				"completato": true,
+				"verificato": false
+			},
+			{
+				"name": "point e",
+				"priority": "green",
+				"completato": true,
+				"verificato": false
+			},
+			{
+				"name": "point f",
+				"priority": "green",
+				"completato": false,
+				"verificato": false
+			},
+			{
+				"name": "point g",
+				"priority": "green",
+				"completato": false,
+				"verificato": false
 			}
-	}
-	,
-	"landmarks": [
-		1
-	],
-	"image": "structure1",
-	"availability":{
-		"2020-07-01":"2020-08-10",
-		"2020-07-20":"2020-08-25",
-		"2020-08-01":"2020-08-10",
-		"2020-08-15":"2020-08-30",
-		"2020-09-05":"2020-09-15"
-	}
-},
-{
-	"id": 2,
-	"published": true,
-	"name": "structure two",
-	"image": "structure2",
-	"location": {
-		"country": "Italy",
-		"state": "Italy",
-		"region": "Tuscany",
-		"council": "Florence"
-	},
-	"certifications": {
-		"level1": {
-			"id": 1,
-			"checklist": [
-				{
-					"point a": [
-						true,
-						true
-					]
-				},
-				{
-					"point b": [
-						true,
-						true
-					]
-				},
-				{
-					"point c": [
-						true,
-						true
-					]
-				},
-				{
-					"point d": [
-						true,
-						true
-					]
-				}
-			],
-			"status": "certified"
-		},
-		"level2": {
-			"id": 2,
-			"checklist": [
-				{
-					"point a": [
-						true,
-						false
-					]
-				},
-				{
-					"point b": [
-						true,
-						false
-					]
-				},
-				{
-					"point c": [
-						true,
-						false
-					]
-				},
-				{
-					"point d": [
-						true,
-						true
-					]
-				},
-				{
-					"point e": [
-						true,
-						true
-					]
-				},
-				{
-					"point f": [
-						true,
-						true
-					]
-				},
-				{
-					"point g": [
-						true,
-						true
-					]
-				}
-			],
-			"status": "certified"
-		},
-		"landmarks": [],
-		"availability": {
-			"2020-07-01": "2020-08-10",
-			"2020-07-20": "2020-08-25",
-			"2020-08-01": "2020-08-10",
-			"2020-08-15": "2020-08-30",
-			"2020-09-05": "2020-09-15"
-		}
-	}
-},
-{
-	"id": 3,
-	"published": false,
-	"name": "structure three",
-	"location": {
-		"country": "Italy",
-		"state": "Italy",
-		"region": "Veneto",
-		"council": "Venetia"
-	},
-	"certifications": {},
-	"landmarks": [],
-	"image": "structure3",
-	"availability":{
-		"2020-07-01":"2020-08-10",
-		"2020-07-20":"2020-08-25",
-		"2020-08-01":"2020-08-10",
-		"2020-08-15":"2020-08-30",
-		"2020-09-05":"2020-09-15"
-	}
-}
+        ],
+        "status": "inprogress"
+      }
+    },
+    "landmarks": [
+      1
+    ],
+    "image": "structure1",
+    "availability": {
+      "2020-07-01": "2020-08-10",
+      "2020-07-20": "2020-08-25",
+      "2020-08-01": "2020-08-10",
+      "2020-08-15": "2020-08-30",
+      "2020-09-05": "2020-09-15"
+    }
+  },
+  {
+    "id": 2,
+    "published": true,
+    "name": "structure two",
+    "image": "structure2",
+    "location": {
+      "country": "Italy",
+      "state": "Italy",
+      "region": "Tuscany",
+      "council": "Florence"
+    },
+    "certifications": {
+      "level1": {
+        "id": 1,
+        "checklist": [
+			{
+				"name": "point a",
+				"priority": "red",
+				"completato": true,
+				"verificato": false
+			},
+			{
+				"name": "point b",
+				"priority": "orange",
+				"completato": true,
+				"verificato": false
+			},
+			{
+				"name": "point c",
+				"priority": "red",
+				"completato": true,
+				"verificato": false
+			},
+			{
+				"name": "point d",
+				"priority": "green",
+				"completato": true,
+				"verificato": false
+			}
+        ],
+        "status": "certified"
+      },
+      "level2": {
+        "id": 2,
+        "checklist": [
+			{
+				"name": "point a",
+				"priority": "red",
+				"completato": true,
+				"verificato": false
+			},
+			{
+				"name": "point b",
+				"priority": "orange",
+				"completato": true,
+				"verificato": false
+			},
+			{
+				"name": "point c",
+				"priority": "red",
+				"completato": true,
+				"verificato": false
+			},
+			{
+				"name": "point d",
+				"priority": "green",
+				"completato": true,
+				"verificato": true
+			},
+			{
+				"name": "point e",
+				"priority": "green",
+				"completato": true,
+				"verificato": true
+			},
+			{
+				"name": "point f",
+				"priority": "green",
+				"completato": true,
+				"verificato": true
+			},
+			{
+				"name": "point g",
+				"priority": "green",
+				"completato": true,
+				"verificato": true
+			}
+        ],
+        "status": "certified"
+      },
+      "landmarks": [],
+      "availability": {
+        "2020-07-01": "2020-08-10",
+        "2020-07-20": "2020-08-25",
+        "2020-08-01": "2020-08-10",
+        "2020-08-15": "2020-08-30",
+        "2020-09-05": "2020-09-15"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "published": false,
+    "name": "structure three",
+    "location": {
+      "country": "Italy",
+      "state": "Italy",
+      "region": "Veneto",
+      "council": "Venetia"
+    },
+    "certifications": {},
+    "landmarks": [],
+    "image": "structure3",
+    "availability": {
+      "2020-07-01": "2020-08-10",
+      "2020-07-20": "2020-08-25",
+      "2020-08-01": "2020-08-10",
+      "2020-08-15": "2020-08-30",
+      "2020-09-05": "2020-09-15"
+    }
+  }
 ]
