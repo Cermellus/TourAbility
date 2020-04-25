@@ -46,15 +46,9 @@ export default {
 	created: function(){
 		this.menu = [
 			{label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/'},
-			{label: 'Sandbox', icon: 'pi pi-fw pi-cog', to: '/Sandbox'},
-			{
-				label: 'My TourAbility', icon: 'pi pi-fw pi-home', badge: '',
-				items: [
-					{label: 'My Accommodations', icon: 'pi pi-fw pi-th-large', to: '/accommodations'},
-					{label: 'My Certifications', icon: 'pi pi-fw pi-star-o', to: '/certifications'},
-					{label: 'My Courses', icon: 'pi pi-fw pi-table', to: '/courses'}
-				]
-			}
+			{label: 'My Accommodations', icon: 'pi pi-fw pi-th-large', to: '/accommodations'},
+			{label: 'My Certifications', icon: 'pi pi-fw pi-star-o', to: '/certifications'},
+			{label: 'My Courses', icon: 'pi pi-fw pi-table', to: '/courses'}
 		];
     },
     watch: {

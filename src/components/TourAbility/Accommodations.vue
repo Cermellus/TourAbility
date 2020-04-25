@@ -5,11 +5,12 @@
                   :sortOrder="sortOrder" :sortField="sortField">
             <template #header>
                 <div class="p-grid p-nogutter">
-                    <div class="p-col-6" style="text-align: left">
+                    <div class="p-col-3" style="text-align: left">
                         <Dropdown v-model="sortKey" :options="sortOptions" optionLabel="label" placeholder="Sort By"
                                   @change="onSortChange($event)"/>
                     </div>
-                    <div class="p-col-6" style="text-align: right">
+                    <div class="table-title p-col-6" style="text-align: center">ACCOMODATIONS</div>
+                    <div class="p-col-3" style="text-align: right">
                         <DataViewLayoutOptions v-model="layout"/>
                     </div>
                 </div>
@@ -89,70 +90,8 @@
     }
 </script>
 
-<style scoped>
-    .p-dropdown {
-        width: 12em;
-    }
-
-    .p-dataview {
-
-    .car-details {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 2em;
-        border-bottom: 1px solid #d9dad9;
-
-    &
-    > div {
-        display: flex;
-        align-items: center;
-
-    img {
-        margin-right: 14px;
-    }
-
-    }
-    }
-
-    .car-detail {
-        padding: 0 1em 1em 1em;
-        border-bottom: 1px solid #d9dad9;
-        margin: 1em;
-    }
-
-    .p-panel-content {
-        padding: 1em;
-    }
-
-    }
-
-    @media (max-width: 1024px) {
-        .p-dataview {
-
-        .car-details {
-
-        img {
-            width: 75px;
-        }
-    }
-
-    }
-    }
-
-    /* Dark Theme such as luna-amber, luna-blue, luna-green and luna-pink */
-    .dark-theme {
-
-    .p-dataview {
-
-    .car-details {
-        border-bottom-color: #191919;
-    }
-
-    .car-detail {
-        border-bottom: 1px solid #191919;
-    }
-
-    }
-    }
+<style lang="scss" scoped>
+   .table-title{
+       font-size: 1.3em;
+   }
 </style>
