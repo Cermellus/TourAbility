@@ -24,8 +24,8 @@
                                 <div class="p-col-12"><b style="fontSize: 1.5em">{{slotProps.data.name}}</b></div>
                                 <div class="p-col-12">{{slotProps.data.location.council}} ({{slotProps.data.location.region}} - {{slotProps.data.location.country}})</div>
                                 <div class="p-col-1">
-                                    <font-awesome-icon icon="eye"       v-if="slotProps.data.published" style="fontSize: 1.5em;color:#00cc00;"  />
-                                    <font-awesome-icon icon="eye-slash" v-else style="fontSize: 1.5em;color:#989898;"  />
+                                    <vue-fontawesome icon="eye" v-if="slotProps.data.published" style="fontSize: 1.5em;color:#00cc00;"  />
+                                    <vue-fontawesome icon="eye-slash" v-else style="fontSize: 1.5em;color:#989898;"  />
                                 </div>
 
                                 <div class="p-col-3" >
@@ -33,7 +33,7 @@
                                         <span class="team-member-role">Not certified</span>
                                     </div>
                                     <div v-else>
-                                        <font-awesome-icon icon="certificate" style="fontSize:1.5em;color:#989898;"  />
+                                        <vue-fontawesome icon="certificate" style="fontSize:1.5em;color:#989898;"  />
                                         <span class="team-member-role"> {{getCertificationTitle(slotProps.data.certifications)}}</span>
                                     </div>
                                 </div>
@@ -51,8 +51,8 @@
                         <img :src="'assets/layout/images/structures/' + slotProps.data.image + '.jpeg'" :alt="slotProps.data.image"/>
                         <div class="car-detail">{{slotProps.data.name}} - {{slotProps.data.location.council}}</div>
                         <div class="p-col-12">
-                                    <font-awesome-icon icon="eye"       v-if="slotProps.data.published" style="fontSize: 1.5em;color:#00cc00;"  />
-                                    <font-awesome-icon icon="eye-slash" v-else style="fontSize: 1.5em;color:#989898;"  />
+                                    <vue-fontawesome icon="eye"       v-if="slotProps.data.published" style="fontSize: 1.5em;color:#00cc00;"  />
+                                    <vue-fontawesome icon="eye-slash" v-else style="fontSize: 1.5em;color:#989898;"  />
                                 </div>
 
                                 <div class="p-col-12" >
@@ -60,7 +60,7 @@
                                         <span class="team-member-role">Not certified</span>
                                     </div>
                                     <div v-else>
-                                        <font-awesome-icon icon="certificate" style="fontSize:1.5em;color:#989898;"  />
+                                        <vue-fontawesome icon="certificate" style="fontSize:1.5em;color:#989898;"  />
                                         <span class="team-member-role">{{getCertificationTitle(slotProps.data.certifications)}}</span>
                                     </div>
                                 </div>
