@@ -1,6 +1,14 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
+
+/*
+TourAbility Components
+*/
+import Sandbox from './components/TourAbility/Sandbox.vue';
+Vue.component('Sandbox', Sandbox);
+
+
 Vue.use(Router);
 
 export default new Router({
@@ -12,9 +20,24 @@ export default new Router({
 			component: () => import('./components/Dashboard.vue')
 		},
 		{
-			path: '/sample',
-			name: 'sample',
-			component: () => import('./components/SampleDemo.vue')
+			path: '/sandbox',
+			name: 'Sandbox',
+			component: Sandbox
+		},
+		{
+			path: '/accommodations',
+			name: 'accommodations',
+			component: () => import('./components/TourAbility/Accommodations.vue')
+		},
+		{
+			path: '/certifications',
+			name: 'certifications',
+			component: () => import('./components/TourAbility/Certifications.vue')
+		},
+		{
+			path: '/courses',
+			name: 'courses',
+			component: () => import('./components/TourAbility/Courses.vue')
 		},
 		{
 			path: '/forms',

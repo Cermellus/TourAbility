@@ -1,0 +1,27 @@
+[{
+		"name": "landmark 1",
+		"location": {
+			"country": "Italy",
+			"state": "Italy",
+			"region": "Lombardy",
+			"council": "Milan"
+		}
+	},
+	{
+		"name": "landmark 2",
+		"location": {
+			"country": "Italy",
+			"state": "Italy",
+			"region": "Veneto",
+			"council": "Venetia"
+		}
+	},
+	{
+		"name": "landmark 3",
+		"location": {
+			"country": "Italy",
+			"state": "Italy",
+			"region": "Veneto",
+			"council": "Venetia"
+		}
+	}
