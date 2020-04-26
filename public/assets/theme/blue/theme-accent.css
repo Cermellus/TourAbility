@@ -3761,7 +3761,7 @@ body .p-fluid .p-inplace.p-inplace-closable .p-inplace-content > :first-child {
 
 /* Add your customizations of the theme here */
 .layout-mask {
-  z-index: 996;
+  z-index: 996 !important;
 }
 
 .layout-wrapper .layout-menu-container .layout-profile .layout-profile-menu {
