@@ -10,7 +10,7 @@
                     <AccordionTab header="Cert. level 1">
                         <div class="task-list">
                             <div class="card card-w-title tasks">
-                                <h1>Tasks</h1>
+                                <h1>Anti-corona measures</h1>
                                 <ul>
                                     <li v-for="c in checklistLevel1" :key="c.id">
                                         <span :class="'task-badge '+c.priority"></span>
@@ -23,7 +23,7 @@
                     <AccordionTab header="Cert. level 2">
                         <div class="task-list">
                             <div class="card card-w-title tasks">
-                                <h1>Tasks</h1>
+                                <h1>Anti-corona measures</h1>
                                 <ul>
                                     <li v-for="c in checklistLevel2" :key="c.id">
                                         <span :class="'task-badge '+c.priority"></span>
@@ -36,7 +36,7 @@
                     <AccordionTab header="Cert. level 3">
                         <div class="task-list">
                             <div class="card card-w-title tasks">
-                                <h1>Tasks</h1>
+                                <h1>Anti-corona measures</h1>
                                 <ul>
                                     <li v-for="c in checklistLevel3" :key="c.id">
                                         <span :class="'task-badge '+c.priority"></span>
