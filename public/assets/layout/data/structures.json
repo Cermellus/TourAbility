@@ -14,28 +14,32 @@
         "id": 1,
         "checklist": [
           {
-            "name": "point a",
-            "priority": "red",
-            "completato": true,
-            "verificato": true
+            "title": "point a",
+            "values": [
+              true,
+              true
+            ]
           },
           {
-            "name": "point b",
-            "priority": "orange",
-            "completato": true,
-            "verificato": true
+            "title": "point b",
+            "values": [
+              true,
+              true
+            ]
           },
           {
-            "name": "point c",
-            "priority": "red",
-            "completato": true,
-            "verificato": true
+            "title": "point c",
+            "values": [
+              true,
+              true
+            ]
           },
           {
-            "name": "point d",
-            "priority": "green",
-            "completato": true,
-            "verificato": true
+            "title": "point d",
+            "values": [
+              true,
+              true
+            ]
           }
         ],
         "status": "certified"
@@ -43,48 +47,55 @@
       "level2": {
         "id": 2,
         "checklist": [
-			{
-				"name": "point a",
-				"priority": "red",
-				"completato": true,
-				"verificato": false
-			},
-			{
-				"name": "point b",
-				"priority": "orange",
-				"completato": true,
-				"verificato": false
-			},
-			{
-				"name": "point c",
-				"priority": "red",
-				"completato": true,
-				"verificato": false
-			},
-			{
-				"name": "point d",
-				"priority": "green",
-				"completato": true,
-				"verificato": false
-			},
-			{
-				"name": "point e",
-				"priority": "green",
-				"completato": true,
-				"verificato": false
-			},
-			{
-				"name": "point f",
-				"priority": "green",
-				"completato": false,
-				"verificato": false
-			},
-			{
-				"name": "point g",
-				"priority": "green",
-				"completato": false,
-				"verificato": false
-			}
+          {
+            "title": "point a",
+            "values": [
+              true,
+              false
+            ]
+          },
+          {
+            "title": "point b",
+            "values": [
+              true,
+              false
+            ]
+          },
+          {
+            "title": "point c",
+            "values": [
+              true,
+              false
+            ]
+          },
+          {
+            "title": "point d",
+            "values": [
+              true,
+              false
+            ]
+          },
+          {
+            "title": "point e",
+            "values": [
+              true,
+              false
+            ]
+          },
+          {
+            "title": "point f",
+            "values": [
+              true,
+              false
+            ]
+          },
+          {
+            "title": "point g",
+            "values": [
+              true,
+              false
+            ]
+          }
         ],
         "status": "inprogress"
       }
@@ -116,78 +127,67 @@
       "level1": {
         "id": 1,
         "checklist": [
-			{
-				"name": "point a",
-				"priority": "red",
-				"completato": true,
-				"verificato": false
-			},
-			{
-				"name": "point b",
-				"priority": "orange",
-				"completato": true,
-				"verificato": false
-			},
-			{
-				"name": "point c",
-				"priority": "red",
-				"completato": true,
-				"verificato": false
-			},
-			{
-				"name": "point d",
-				"priority": "green",
-				"completato": true,
-				"verificato": false
-			}
+          {
+            "title": "point a",
+            "vG": true,
+            "vI": true
+          },
+          {
+            "title": "point b",
+            "vG": true,
+            "vI": true
+          },
+          {
+            "title": "point c",
+            "vG": true,
+            "vI": true
+          },
+          {
+            "title": "point d",
+            "vG": true,
+            "vI": true
+          }
         ],
         "status": "certified"
       },
       "level2": {
         "id": 2,
         "checklist": [
-			{
-				"name": "point a",
-				"priority": "red",
-				"completato": true,
-				"verificato": false
-			},
-			{
-				"name": "point b",
-				"priority": "orange",
-				"completato": true,
-				"verificato": false
-			},
-			{
-				"name": "point c",
-				"priority": "red",
-				"completato": true,
-				"verificato": false
-			},
-			{
-				"name": "point d",
-				"priority": "green",
-				"completato": true,
-				"verificato": true
-			},
-			{
-				"name": "point e",
-				"priority": "green",
-				"completato": true,
-				"verificato": true
-			},
-			{
-				"name": "point f",
-				"priority": "green",
-				"completato": true,
-				"verificato": true
-			},
-			{
-				"name": "point g",
-				"priority": "green",
-				"completato": true,
-				"verificato": true
-			}
+          {
+            "title": "point a",
+            "vG": true,
+            "vI": true
+          },
+          {
+            "title": "point b",
+            "vG": true,
+            "vI": true
+          },
+          {
+            "title": "point c",
+            "vG": true,
+            "vI": true
+          },
+          {
+            "title": "point d",
+            "vG": true,
+            "vI": true
+          },
+          {
+            "title": "point e",
+            "vG": true,
+            "vI": true
+          },
+          {
+            "title": "point f",
+            "vG": true,
+            "vI": true
+          },
+          {
+            "title": "point g",
+            "vG": true,
+            "vI": true
+          }
         ],
         "status": "certified"
       },
