@@ -11,20 +11,21 @@
     "certifications": {
             "level1": {
                 "id": 1,
-                "checklist": [{
-                        "title":"point a",
+                "checklist": [
+                    {
+                        "title":"Individual protected relaxation areas (IPRAs) on or off premises",
                         "values": [true,true]
                     },
                     {
-                        "title":"point b",
+                        "title":"Minimisation of jointly used paths to IPRAs (creation of new paths)",
                         "values": [true,true]
                     },
                     {
-                            "title":"point c",
+                            "title":"Set up external tap (or even shower) with liquid soap",
                         "values": [true,true]
                     },
                     {
-                        "title":"point d",
+                        "title":"Offer shuttle service from/to airport",
                         "values": [true,true]
                     }
                 ],
@@ -34,31 +35,27 @@
                 "id": 2,
                 "checklist": [
                     {
-                        "title":"point a",
+                        "title":"Daily disinfection of common areas",
                         "values": [true,false]
                     },
                     {
-                        "title":"point b",
+                        "title":"Offer disinfectant hand liquid at reception & in rooms/apts",
                         "values": [true,false]
                     },
                     {
-                            "title":"point c",
+                            "title":"Establish different time slots for each group of guests",
                         "values": [true,false]
                     },
                     {
-                        "title":"point d",
+                        "title":" • Arriving / leaving the accommodation every day",
                         "values": [true,false]
                     },
                     {
-                        "title":"point e",
+                        "title":" •  Use of external shower, if any",
                         "values": [true,false]
                     },
                     {
-                        "title":"point f",
-                        "values": [true,false]
-                    },
-                    {
-                            "title":"point g",
+                        "title":"Fixed supply of latex gloves on arrival",
                         "values": [true,false]
                     }
                 ],
@@ -94,25 +91,21 @@
             "id": 1,
             "checklist": [
                 {
-                    "title":"point a",
-                    "vG":true,
-                    "vI":true
-                },
-                {
-                    "title":"point b",
-                    "vG":true,
-                    "vI":true
-                },
-                {
-                        "title":"point c",
-                        "vG":true,
-                        "vI":true
-                },
-                {
-                    "title":"point d",
-                    "vG":true,
-                    "vI":true
-                }
+                        "title":"Individual protected relaxation areas (IPRAs) on or off premises",
+                        "values": [true,true]
+                    },
+                    {
+                        "title":"Minimisation of jointly used paths to IPRAs (creation of new paths)",
+                        "values": [true,true]
+                    },
+                    {
+                            "title":"Set up external tap (or even shower) with liquid soap",
+                        "values": [true,true]
+                    },
+                    {
+                        "title":"Offer shuttle service from/to airport",
+                        "values": [true,true]
+                    }
             ],
             "status": "certified"
         },
@@ -120,39 +113,28 @@
             "id": 2,
             "checklist": [
                 {
-                    "title":"point a",
-                    "vG":true,
-                    "vI":true
+                    "title":"Daily disinfection of common areas",
+                    "values": [true,false]
                 },
                 {
-                    "title":"point b",
-                    "vG":true,
-                    "vI":true
+                    "title":"Offer disinfectant hand liquid at reception & in rooms/apts",
+                    "values": [true,false]
                 },
                 {
-                        "title":"point c",
-                        "vG":true,
-                        "vI":true
+                        "title":"Establish different time slots for each group of guests",
+                    "values": [true,false]
                 },
                 {
-                    "title":"point d",
-                    "vG":true,
-                    "vI":true
+                    "title":" • Arriving / leaving the accommodation every day",
+                    "values": [true,false]
                 },
                 {
-                    "title":"point e",
-                    "vG":true,
-                    "vI":true
+                    "title":" •  Use of external shower, if any",
+                    "values": [true,false]
                 },
                 {
-                    "title":"point f",
-                    "vG":true,
-                    "vI":true
-                },
-                {
-                        "title":"point g",
-                        "vG":true,
-                        "vI":true
+                    "title":"Fixed supply of latex gloves on arrival",
+                    "values": [true,false]
                 }
             ],
             "status": "certified"

@@ -3,19 +3,29 @@
     "id": 1,
     "checklist": [
       {
-        "name": "point a",
+        "name": "Individual protected relaxation areas (IPRAs) on or off premises",
         "priority": "red"
       },
       {
-        "name": "point b",
+        "name": "Minimisation of jointly used paths to IPRAs (creation of new paths)",
         "priority": "orange"
       },
       {
-        "name": "point c",
+        "name": "Set up external tap (or even shower) with liquid soap ",
         "priority": "red"
       },
       {
-        "name": "point d",
+        "name": "Offer shuttle service from/to airport",
+        "priority": "green"
+      }
+      ,
+      {
+        "name": "Offer delivery of online shopping to accommodation",
+        "priority": "green"
+      }
+      ,
+      {
+        "name": "Offer hair cutting service at accommodation",
         "priority": "green"
       }
     ]
@@ -24,31 +34,27 @@
     "id": 2,
     "checklist": [
       {
-        "name": "point a",
+        "name": "Daily disinfection of common areas",
         "priority": "red"
       },
       {
-        "name": "point b",
+        "name": "Offer disinfectant hand liquid at reception & in rooms/apts",
         "priority": "orange"
       },
       {
-        "name": "point c",
+        "name": "Establish different time slots for each group of guests",
         "priority": "red"
       },
       {
-        "name": "point d",
+        "name": " • Arriving / leaving the accommodation every day",
+        "priority": "red"
+      },
+      {
+        "name": " •  Use of external shower, if any",
         "priority": "green"
       },
       {
-        "name": "point e",
-        "priority": "green"
-      },
-      {
-        "name": "point f",
-        "priority": "orange"
-      },
-      {
-        "name": "point g",
+        "name": "Fixed supply of latex gloves on arrival",
         "priority": "green"
       }
     ]
@@ -57,44 +63,12 @@
     "id": 3,
     "checklist": [
       {
-        "name": "point a",
+        "name": "Creation / modification of entrances / external stairs",
         "priority": "red"
       },
       {
-        "name": "point b",
+        "name": "Carpark with large spaces separated by posts",
         "priority": "orange"
-      },
-      {
-        "name": "point c",
-        "priority": "red"
-      },
-      {
-        "name": "point d",
-        "priority": "green"
-      },
-      {
-        "name": "point e",
-        "priority": "green"
-      },
-      {
-        "name": "point f",
-        "priority": "orange"
-      },
-      {
-        "name": "point g",
-        "priority": "red"
-      },
-      {
-        "name": "point h",
-        "priority": "green"
-      },
-      {
-        "name": "point i",
-        "priority": "red"
-      },
-      {
-        "name": "point j",
-        "priority": "red"
       }
     ]
   }
