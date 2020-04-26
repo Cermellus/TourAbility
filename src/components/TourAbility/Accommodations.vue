@@ -60,13 +60,15 @@
                                     <vue-fontawesome icon="eye-slash" v-else style="fontSize: 1.5em;color:#989898;"/>
                                 </div>
 
-                                <div class="p-col-3">
+                                <div class="p-col-4">
                                     <div v-if="!getCertification(slotProps.data.certifications)">
-                                        <span class="certification">Not certified</span>
+                                        <span class="certification"  style="fontSize: 1.1em;">Not certified</span>
                                     </div>
                                     <div v-else>
                                         <vue-fontawesome icon="certificate" style="margin-top:0.05em;fontSize:1.5em;color:#ffc107;"/>
-                                        <span :class="'certification lev-'+getCertification(slotProps.data.certifications).id">{{getCertification(slotProps.data.certifications).title}}</span>
+                                        <span
+                                         style="fontSize: 1.1em;"
+                                        :class="'certification lev-'+getCertification(slotProps.data.certifications).id">{{getCertification(slotProps.data.certifications).title}}</span>
                                     </div>
                                 </div>
 
