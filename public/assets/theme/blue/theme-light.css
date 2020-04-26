@@ -3771,10 +3771,10 @@ body .p-fluid .p-inplace.p-inplace-closable .p-inplace-content > :first-child {
   background-color: #ffffff;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu > li > a > span {
-  color: #FDE3D7 !important;
+  color: #e30613 !important;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu > li > a > i {
-  color: #FDE3D7 !important;
+  color: #e30613 !important;
 }
 .layout-wrapper.layout-menu-light.layout-mobile-active .layout-menu-container {
   background-color: #ffffff;
@@ -3807,6 +3807,9 @@ body .p-fluid .p-inplace.p-inplace-closable .p-inplace-content > :first-child {
   .layout-wrapper.layout-horizontal .layout-menu-container .layout-menu {
     font-size: 1.4em;
     margin-top: 0.4em !important;
+  }
+  .layout-wrapper.layout-horizontal .layout-menu-container .layout-menu li a .layout-menuitem-text {
+    font-weight: 400 !important;
   }
   .layout-wrapper.layout-horizontal .layout-menu-container .layout-menu li a .layout-menuitem-text:active, .layout-wrapper.layout-horizontal .layout-menu-container .layout-menu li a .layout-menuitem-text:hover {
     color: #fff !important;

@@ -138,7 +138,7 @@ a {
   right: 0;
   z-index: 997;
   padding: 8px 25px;
-  background-color: #e30613;
+  background-color: #fae1d6;
   -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -154,6 +154,8 @@ a {
 .layout-wrapper .layout-topbar .layout-topbar-logo img {
   margin-top: 7px;
   height: 30px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 .layout-wrapper .layout-topbar .layout-menu-button {
   cursor: pointer;
@@ -162,7 +164,7 @@ a {
   height: 44px;
   line-height: 44px;
   text-align: center;
-  color: #fde3d7;
+  color: #e30613;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -192,7 +194,7 @@ a {
   display: none;
   float: right;
   text-align: center;
-  color: #fde3d7;
+  color: #e30613;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -241,7 +243,7 @@ a {
   transition: background-color 0.3s;
 }
 .layout-wrapper .layout-topbar .topbar-menu > li > button .topbar-icon {
-  color: #fde3d7;
+  color: #e30613;
   line-height: inherit;
   font-size: 28px;
 }
@@ -1035,7 +1037,7 @@ a {
     min-width: 250px;
     max-height: 450px;
     display: none;
-    border-left: 4px solid #e30613;
+    border-left: 4px solid #fae1d6;
     padding: 8px 12px;
     -moz-border-radius-topright: 3px;
     -webkit-border-top-right-radius: 3px;
@@ -1136,7 +1138,7 @@ a {
     min-width: 250px;
     max-height: 450px;
     display: none;
-    border-left: 4px solid #e30613;
+    border-left: 4px solid #fae1d6;
     padding: 8px 12px;
     -moz-border-radius-topright: 3px;
     -webkit-border-top-right-radius: 3px;
@@ -1346,7 +1348,7 @@ a {
     padding: 8px 12px;
     max-height: 450px;
     overflow: auto;
-    border-top: 4px solid #e30613;
+    border-top: 4px solid #fae1d6;
     -moz-border-radius-bottomleft: 3px;
     -webkit-border-bottom-left-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -1582,7 +1584,7 @@ a {
   bottom: 15px;
 }
 .layout-wrapper .layout-ajax-loader .layout-ajax-loader-icon {
-  color: #e30613;
+  color: #fae1d6;
   font-size: 32px;
 }
 
@@ -2448,7 +2450,7 @@ a {
 }
 .landing-body .landing-wrapper #promo {
   padding: 42px 140px;
-  border-top: 5px solid #e30613;
+  border-top: 5px solid #fae1d6;
   background-color: #f2f2f2;
   position: relative;
 }
@@ -2527,7 +2529,7 @@ a {
   color: #1fc4ac;
 }
 .landing-body .landing-wrapper #pricing .pricing-box:hover {
-  border-color: #e30613;
+  border-color: #fae1d6;
 }
 .landing-body .landing-wrapper #multimedia {
   padding: 42px 140px;

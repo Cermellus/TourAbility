@@ -10,7 +10,7 @@
         </div>
 
         <button class="layout-topbar-logo p-link">
-            <img id="layout-topbar-logo" alt="babylon-layout" src="assets/layout/images/tourability_logo.png"/>
+            <img id="layout-topbar-logo" alt="babylon-layout" src="assets/layout/images/logo.svg"/>
         </button>
 
         <button class="layout-menu-button p-link" @click="onMenuButtonClick">
@@ -96,7 +96,7 @@
         top: 0.5em;
         right: .5em;
         z-index: 999;
-        color: #FDE3d7;
+        color: #e30613;
         font-size: 1.7em;
     }
 

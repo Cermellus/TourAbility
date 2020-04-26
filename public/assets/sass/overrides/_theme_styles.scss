@@ -20,11 +20,11 @@
         > li {
           > a {
             > span {
-              color: $primaryTextColor !important;
+              color: $primaryColor !important;
             }
 
             > i {
-              color: $primaryTextColor !important;
+              color: $primaryColor !important;
             }
           }
         }
@@ -71,6 +71,7 @@
         .layout-menu{
 
            li a .layout-menuitem-text{
+             font-weight: 400!important;
              &:active,
              &:hover{
                color: #fff!important;
