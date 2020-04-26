@@ -15,15 +15,12 @@
 
 		</div>
 
-		<AppFooter/>
-
 		<div v-if="staticMenuMobileActive" class="layout-mask"></div>
 	</div>
 </template>
 
 <script>
 import AppTopBar from './AppTopbar.vue';
-import AppFooter from './AppFooter.vue';
 import AppProfile from './AppProfile.vue';
 import EventBus from './event-bus';
 
@@ -194,7 +191,6 @@ export default {
 	},
 	components: {
 		'AppTopBar': AppTopBar,
-		'AppFooter': AppFooter,
 		'AppProfile': AppProfile
 	}
 }
