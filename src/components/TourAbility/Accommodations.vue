@@ -140,7 +140,6 @@
                     </div>
                 </div>
             </div>
-            <!--<CheckList v-else name="test1" v-bind:title="post.title" ></CheckList>-->
 
             <Button v-if="showBLev2" :style="{width: '100%','margin-bottom':'20px','margin-top':'10px'}" label="Cert. level 2"
                     icon="pi pi-plus"/>
@@ -166,7 +165,6 @@
                     icon="pi pi-plus"/>
 
             <template #footer>
-                <!--<Button label="Yes" @click="close" icon="pi pi-check"/>-->
                 <Button label="Close" @click="close" icon="pi pi-times" class="p-button-secondary"/>
                 <Button label="Confirm" @click="close" icon="pi pi-check" class="p-button-primary"/>
             </template>
@@ -234,9 +232,17 @@
         },
         methods: {
             open(structure) {
-
                 this.dialogTitle = structure.name;
-
+                
+                if(structure.id==3){
+                    this.showBLev1 = true;
+                    this.showBLev2 = true;
+                    this.showBLev3 = true;
+                    this.showTask1 = false;
+                    this.showTask2 = false;
+                    this.showTask3 = false;
+                }else{
+                
                 let certifications = structure.certifications;
 
                 if (structure.certifications.level1) {
@@ -244,6 +250,7 @@
                     this.showTask1 = false;
                 }
                 this.CL1 = certifications.level1;
+
 
                 if (structure.certifications.level2) {
                     this.showBLev2 = false;
@@ -256,10 +263,11 @@
                     this.showTask3 = false;
                 }
                 this.CL3 = certifications.level3;
-
+                }
+/*
                 console.log(this.CL1);
                 console.log(this.CL2);
-                console.log(this.CL3);
+                console.log(this.CL3);*/
 
 
                 this.display = true;
