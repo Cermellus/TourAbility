@@ -9,7 +9,7 @@
             </div>
         </div>
 
-        <button class="layout-topbar-logo p-link">
+        <button class="layout-topbar-logo p-link" @click="goToDashboard()">
             <img id="layout-topbar-logo" alt="babylon-layout" src="assets/layout/images/logo.svg"/>
         </button>
 
@@ -55,6 +55,9 @@
             },
             doLogout() {
                 this.$router.replace('/login');
+            },
+            goToDashboard() {
+                this.$router.push('Dashboard');
             }
         },
         computed: {

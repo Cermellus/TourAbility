@@ -3805,6 +3805,10 @@ div {
   .layout-wrapper .layout-topbar {
     height: 80px !important;
   }
+  .layout-wrapper .layout-topbar .layout-topbar-logo {
+    height: 80px !important;
+    margin-top: -7px !important;
+  }
   .layout-wrapper.layout-horizontal .layout-menu-container {
     width: 50% !important;
     top: 7px !important;

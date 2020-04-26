@@ -69,7 +69,13 @@ div {
 }
 @media screen and (min-width: 897px) {
   .layout-wrapper {
+
     .layout-topbar {
+      .layout-topbar-logo{
+        height: 80px!important;
+        margin-top: -7px!important;
+      }
+
       height: 80px!important;
     }
     &.layout-horizontal {

@@ -1,6 +1,6 @@
 <template>
 	<div class="p-grid p-fluid layout-dashboard">
-		<div class="p-col-12">
+		<div class="p-col-12" style="padding-top: 36px;">
 			<div class="card card-w-title">
 				<Panel>
 					<template #header>

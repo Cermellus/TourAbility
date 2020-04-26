@@ -154,7 +154,8 @@ a {
 .layout-wrapper .layout-topbar .layout-topbar-logo img {
   margin-top: 7px;
   height: 30px;
-  padding-left: 2em;
+  padding-left: 2.5em;
+  padding-right: 2em;
 }
 .layout-wrapper .layout-topbar .layout-menu-button {
   cursor: pointer;
