@@ -1,6 +1,30 @@
 <template>
     <div>
 
+    <div class="p-grid p-fluid" style="margin-top:30px;margin-bottom:30px;">
+            <div class="p-col-1 p-lg-1">
+                <ToggleButton v-model="fc1" @change="fcSimulation(1)" onLabel="All" offLabel="All" onIcon="pi pi-check" offIcon="pi pi-times" />
+            </div>
+            <div class="p-col-2 p-lg-2">
+                <ToggleButton v-model="fc2" @change="fcSimulation(2)" onLabel="Online" offLabel="Online" onIcon="pi pi-check" offIcon="pi pi-times" />
+            </div>
+            <div class="p-col-2 p-lg-2">
+                <ToggleButton v-model="fc3" @change="fcSimulation(3)" onLabel="Not yet online" offLabel="Not yet online" onIcon="pi pi-check" offIcon="pi pi-times" />
+            </div>
+            <div class="p-col-2 p-lg-2">
+                <ToggleButton v-model="fc4" @change="fcSimulation(4)" onLabel="Certified to level 1" offLabel="Certified to level 1" onIcon="pi pi-check" offIcon="pi pi-times" />
+            </div>
+            <div class="p-col-2 p-lg-2">
+                <ToggleButton v-model="fc5" @change="fcSimulation(5)" onLabel="Certified to level 2" offLabel="Certified to level 2" onIcon="pi pi-check" offIcon="pi pi-times" />
+            </div>
+            <div class="p-col-2 p-lg-2">
+                <ToggleButton v-model="fc6" @change="fcSimulation(6)" onLabel="Certified to level 3" offLabel="Certified to level 3" onIcon="pi pi-check" offIcon="pi pi-times" />
+            </div>
+    </div>
+
+
+
+
         <DataView :value="structures" :layout="layout" paginatorPosition="both" :paginator="true" :rows="20"
                   :sortOrder="sortOrder" :sortField="sortField">
             <template #header>
@@ -81,6 +105,14 @@
     export default {
         data() {
             return {
+                fc1: false,
+                fc2: true,
+                fc3: true,
+                fc4: false,
+                fc5: false,
+                fc6: false,
+
+                display: false,
                 structures: null,
                 cars: null,
                 layout: 'list',
@@ -88,9 +120,9 @@
                 sortOrder: null,
                 sortField: null,
                 sortOptions: [
-                    {label: 'Newest First', value: '!year'},
-                    {label: 'Oldest First', value: 'year'},
-                    {label: 'Brand', value: 'brand'}
+                    {label: 'Newest First', value: '!id'},
+                    {label: 'Oldest First', value: 'id'},
+                    {label: 'Name', value: 'name'}
                 ]
             }
         },
@@ -103,6 +135,32 @@
             this.mockService.getStructures().then(data => this.structures = data);
         },
         methods: {
+            fcSimulation(fcId){
+                if(fcId==1){
+                    if( this.fc1===true){
+                    this.fc2=true;
+                    this.fc3=true;
+                    this.fc4=true;
+                    this.fc5=true;
+                    this.fc6=true;
+                    }else{
+                        this.fc2=false;
+                        this.fc3=false;
+                        this.fc4=false;
+                        this.fc5=false;
+                        this.fc6=false;
+                    }
+                }else{
+                    if( !this.fc2 ||
+                        !this.fc3 ||
+                        !this.fc4 ||
+                        !this.fc5 ||
+                        !this.fc6
+                     ){
+                         this.fc1=false;
+                     }
+                }
+            },
             onSortChange(event) {
                 const value = event.value.value;
                 const sortValue = event.value;
