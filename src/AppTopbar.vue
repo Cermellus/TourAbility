@@ -57,7 +57,7 @@
                 this.$router.replace('/login');
             },
             goToDashboard() {
-                this.$router.push('Dashboard');
+                this.$router.push('/');
             }
         },
         computed: {
