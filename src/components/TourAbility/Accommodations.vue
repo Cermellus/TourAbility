@@ -73,12 +73,18 @@
                                 </div>
 
 
+                                <div class="p-col-6 "  style="text-align:right;fontSize: 1.1em;">
+                                    Average guest rating  <span class="rating">{{slotProps.data.rating}}</span>
+                                </div>
+
+
                             </div>
                         </div>
                         <div style="text-align: right">
                             <Button icon="pi pi-list" style="margin-right: 0.5em;" @click="open(slotProps.data)"/>
                             <Button v-if="slotProps.data.published" icon="fa fa-eye-slash" @click="unpublish(slotProps.data)"/>
                             <Button v-else icon="fa fa-eye" @click="publish(slotProps.data)"/>
+                            
                         </div>
 
                     </div>
@@ -106,6 +112,9 @@
                             </div>
                         </div>
 
+                                <div class="p-col-12 "  style="fontSize: 1.1em;">
+                                 Average guest rating     <span style="margin-bottom:10px;" class="rating">{{slotProps.data.rating}}</span>
+                                </div>
                         <div style="text-align: center">
                             <Button icon="pi pi-list" style="margin-right: 0.5em;" @click="open(slotProps.data)"/>
                             <Button v-if="slotProps.data.published" icon="fa fa-eye-slash" @click="unpublish(slotProps.data)"/>
@@ -432,5 +441,13 @@
     }
     .lev-3{
         background-color: #32c104;
+    }
+
+    .rating{
+        background-color: #1a58c9;
+        color: #ffffff;
+        margin-left: 0.2em;
+        border-radius: 4px;
+        padding: 4px;
     }
 </style>

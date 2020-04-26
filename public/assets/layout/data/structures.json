@@ -1,6 +1,7 @@
 [{
     "id": 1,
     "published": true,
+    "rating":"7.3 / 10",
     "name": "structure one",
     "location": {
         "country": "Italy",
@@ -78,6 +79,7 @@
 {
     "id": 2,
     "published": true,
+    "rating":"8.2 / 10",
     "name": "structure two",
     "image": "structure2",
     "location": {
@@ -152,6 +154,7 @@
 {
     "id": 3,
     "published": false,
+    "rating":"6.1 / 10",
     "name": "structure three",
     "location": {
         "country": "Italy",
