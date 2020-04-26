@@ -15,16 +15,16 @@
                               onIcon="pi pi-check" offIcon="pi pi-times"/>
             </div>
             <div class="p-col-2 p-lg-2" style="min-width: 10em;">
-                <ToggleButton v-model="fc4" @change="fcSimulation(4)" onLabel="Level 1"
-                              offLabel="Level 1" onIcon="pi pi-check" offIcon="pi pi-times"/>
+                <ToggleButton v-model="fc4" @change="fcSimulation(4)" onLabel="Cert. level 1"
+                              offLabel="Cert. level 1" onIcon="pi pi-check" offIcon="pi pi-times"/>
             </div>
             <div class="p-col-2 p-lg-2" style="min-width: 10em;">
-                <ToggleButton v-model="fc5" @change="fcSimulation(5)" onLabel="Level 2"
-                              offLabel="Level 2" onIcon="pi pi-check" offIcon="pi pi-times"/>
+                <ToggleButton v-model="fc5" @change="fcSimulation(5)" onLabel="Cert. level 2"
+                              offLabel="Cert. level 2" onIcon="pi pi-check" offIcon="pi pi-times"/>
             </div>
             <div class="p-col-2 p-lg-2" style="min-width: 10em;">
-                <ToggleButton v-model="fc6" @change="fcSimulation(6)" onLabel="Level 3"
-                              offLabel="Level 3" onIcon="pi pi-check" offIcon="pi pi-times"/>
+                <ToggleButton v-model="fc6" @change="fcSimulation(6)" onLabel="Cert. level 3"
+                              offLabel="Cert. level 3" onIcon="pi pi-check" offIcon="pi pi-times"/>
             </div>
         </div>
 
@@ -333,11 +333,11 @@
                     if (certifications.level1 && certifications.level1.status === 'certified') {
                         if (certifications.level2 && certifications.level2.status === 'certified') {
                             if (certifications.level3 && certifications.level3.status === 'certified') {
-                                return {id:3,"title":"Level 2"};
+                                return {id:3,"title":"Cert. level 3"};
                             }
-                            return {id:2,"title":"Level 2"};
+                            return {id:2,"title":"Cert. level 2"};
                         }
-                        return {id:1,"title":"Level 1"};
+                        return {id:1,"title":"Cert. level 1"};
                     }
                 }
                 return null;
