@@ -37,7 +37,7 @@
                         <Dropdown v-model="sortKey" :options="sortOptions" optionLabel="label" placeholder="Sort By"
                                   @change="onSortChange($event)"/>
                     </div>
-                    <div class="table-title p-col-4" style="text-align: center">ACCOMODATIONS</div>
+                    <div class="table-title p-col-4" style="text-align: center">Accomodations</div>
                     <div class="p-col-4" style="text-align: right">
                         <DataViewLayoutOptions v-model="layout"/>
                     </div>
@@ -49,7 +49,7 @@
                         <div>
                             <img :src="'assets/layout/images/structures/' + slotProps.data.image + '.jpeg'"
                                  :alt="slotProps.data.brand"/>
-                            <div class="p-grid">
+                            <div class="p-grid" style="padding-left: 3em;">
                                 <div class="p-col-12"><b style="fontSize: 1.5em">{{slotProps.data.name}}</b></div>
                                 <div class="p-col-12">{{slotProps.data.location.council}}
                                     ({{slotProps.data.location.region}} - {{slotProps.data.location.country}})
@@ -233,7 +233,7 @@
         methods: {
             open(structure) {
                 this.dialogTitle = structure.name;
-                
+
                 if(structure.id==3){
                     this.showBLev1 = true;
                     this.showBLev2 = true;
@@ -242,7 +242,7 @@
                     this.showTask2 = false;
                     this.showTask3 = false;
                 }else{
-                
+
                 let certifications = structure.certifications;
 
                 if (structure.certifications.level1) {

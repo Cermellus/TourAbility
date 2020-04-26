@@ -2,6 +2,11 @@
 	<div class="p-grid p-fluid layout-dashboard">
 		<div class="p-col-12">
 			<div class="card card-w-title">
+				<Panel>
+					<template #header>
+						<div style="text-align: center;font-size: 1.3em;">Courses</div>
+
+					</template>
 				<h1>Improve your skills!</h1>
 				<Accordion>
 					<AccordionTab header="Topic 1">
@@ -80,6 +85,7 @@
 						</div>
 				</AccordionTab>
 				</Accordion>
+				</Panel>
 			</div>
 		</div>
 	</div>

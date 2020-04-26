@@ -79,7 +79,7 @@ body {
   padding: 0;
   margin: 0;
   min-height: 100%;
-  background-color: #f2f2f2;
+  background-color: #f5edea;
 }
 
 a {
@@ -138,7 +138,7 @@ a {
   right: 0;
   z-index: 997;
   padding: 8px 25px;
-  background-color: #fae1d6;
+  background-color: #FDE7DD;
   -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -154,8 +154,7 @@ a {
 .layout-wrapper .layout-topbar .layout-topbar-logo img {
   margin-top: 7px;
   height: 30px;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding-left: 2em;
 }
 .layout-wrapper .layout-topbar .layout-menu-button {
   cursor: pointer;
@@ -1037,7 +1036,7 @@ a {
     min-width: 250px;
     max-height: 450px;
     display: none;
-    border-left: 4px solid #fae1d6;
+    border-left: 4px solid #FDE7DD;
     padding: 8px 12px;
     -moz-border-radius-topright: 3px;
     -webkit-border-top-right-radius: 3px;
@@ -1138,7 +1137,7 @@ a {
     min-width: 250px;
     max-height: 450px;
     display: none;
-    border-left: 4px solid #fae1d6;
+    border-left: 4px solid #FDE7DD;
     padding: 8px 12px;
     -moz-border-radius-topright: 3px;
     -webkit-border-top-right-radius: 3px;
@@ -1348,7 +1347,7 @@ a {
     padding: 8px 12px;
     max-height: 450px;
     overflow: auto;
-    border-top: 4px solid #fae1d6;
+    border-top: 4px solid #FDE7DD;
     -moz-border-radius-bottomleft: 3px;
     -webkit-border-bottom-left-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -1584,7 +1583,7 @@ a {
   bottom: 15px;
 }
 .layout-wrapper .layout-ajax-loader .layout-ajax-loader-icon {
-  color: #fae1d6;
+  color: #FDE7DD;
   font-size: 32px;
 }
 
@@ -2450,7 +2449,7 @@ a {
 }
 .landing-body .landing-wrapper #promo {
   padding: 42px 140px;
-  border-top: 5px solid #fae1d6;
+  border-top: 5px solid #FDE7DD;
   background-color: #f2f2f2;
   position: relative;
 }
@@ -2529,7 +2528,7 @@ a {
   color: #1fc4ac;
 }
 .landing-body .landing-wrapper #pricing .pricing-box:hover {
-  border-color: #fae1d6;
+  border-color: #FDE7DD;
 }
 .landing-body .landing-wrapper #multimedia {
   padding: 42px 140px;
