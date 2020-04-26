@@ -1,8 +1,13 @@
 /* Add your customizations of the theme here */
-.layout-mask {
-  z-index: 996;
+div {
+  border-radius: 0.2em;
 }
-
+.p-dataview-header{
+  font-weight: 400!important;
+}
+.layout-mask {
+  z-index: 996!important;
+}
 .layout-wrapper {
   .layout-menu-container {
     .layout-profile {
@@ -21,11 +26,11 @@
         > li {
           > a {
             > span {
-              color: $primaryTextColor !important;
+              color: $primaryColor !important;
             }
 
             > i {
-              color: $primaryTextColor !important;
+              color: $primaryColor !important;
             }
           }
         }
@@ -64,7 +69,13 @@
 }
 @media screen and (min-width: 897px) {
   .layout-wrapper {
+
     .layout-topbar {
+      .layout-topbar-logo{
+        height: 80px!important;
+        margin-top: -7px!important;
+      }
+
       height: 80px!important;
     }
     &.layout-horizontal {
@@ -72,6 +83,7 @@
         .layout-menu{
 
            li a .layout-menuitem-text{
+             font-weight: 400!important;
              &:active,
              &:hover{
                color: #fff!important;

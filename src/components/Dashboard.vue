@@ -1,7 +1,18 @@
 <template>
 	<div class="layout-dashboard">
-		<div class="p-grid">
-
+		<div class="p-grid" style="padding-top: 36px;">
+			<div class="p-col-12 p-md-7">
+				<div class="card card-w-title statistics">
+					<h1>Statistics</h1>
+					<Chart type="line" :data="chartData" :options="chartOptions"/>
+				</div>
+			</div>
+			<div class="p-col-12 p-md-5">
+				<div class="card">
+					<h1 class="centerText">Polar Area Chart</h1>
+					<Chart type="polarArea" :data="polarData" />
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -60,6 +71,33 @@ export default {
 						fill: false
 					}]
 			},
+			polarData: {
+				datasets: [{
+					data: [
+						11,
+						16,
+						7,
+						3,
+						14
+					],
+					backgroundColor: [
+						"#FFC107",
+						"#03A9F4",
+						"#4CAF50",
+						"#E91E63",
+						"#9C27B0"
+					],
+					label: 'My dataset'
+				}],
+				labels: [
+					"Yellow",
+					"Blue",
+					"Green",
+					"Pink",
+					"Purple"
+				]
+			},
+
 			chartOptions: {
 				responsive: true,
 				hover: {

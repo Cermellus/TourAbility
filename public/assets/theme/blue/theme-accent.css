@@ -3760,8 +3760,16 @@ body .p-fluid .p-inplace.p-inplace-closable .p-inplace-content > :first-child {
 }
 
 /* Add your customizations of the theme here */
+div {
+  border-radius: 0.2em;
+}
+
+.p-dataview-header {
+  font-weight: 400 !important;
+}
+
 .layout-mask {
-  z-index: 996;
+  z-index: 996 !important;
 }
 
 .layout-wrapper .layout-menu-container .layout-profile .layout-profile-menu {
@@ -3771,10 +3779,10 @@ body .p-fluid .p-inplace.p-inplace-closable .p-inplace-content > :first-child {
   background-color: #ffffff;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu > li > a > span {
-  color: #FDE3D7 !important;
+  color: #e30613 !important;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu > li > a > i {
-  color: #FDE3D7 !important;
+  color: #e30613 !important;
 }
 .layout-wrapper.layout-menu-light.layout-mobile-active .layout-menu-container {
   background-color: #ffffff;
@@ -3797,6 +3805,10 @@ body .p-fluid .p-inplace.p-inplace-closable .p-inplace-content > :first-child {
   .layout-wrapper .layout-topbar {
     height: 80px !important;
   }
+  .layout-wrapper .layout-topbar .layout-topbar-logo {
+    height: 80px !important;
+    margin-top: -7px !important;
+  }
   .layout-wrapper.layout-horizontal .layout-menu-container {
     width: 50% !important;
     top: 7px !important;
@@ -3807,6 +3819,9 @@ body .p-fluid .p-inplace.p-inplace-closable .p-inplace-content > :first-child {
   .layout-wrapper.layout-horizontal .layout-menu-container .layout-menu {
     font-size: 1.4em;
     margin-top: 0.4em !important;
+  }
+  .layout-wrapper.layout-horizontal .layout-menu-container .layout-menu li a .layout-menuitem-text {
+    font-weight: 400 !important;
   }
   .layout-wrapper.layout-horizontal .layout-menu-container .layout-menu li a .layout-menuitem-text:active, .layout-wrapper.layout-horizontal .layout-menu-container .layout-menu li a .layout-menuitem-text:hover {
     color: #fff !important;

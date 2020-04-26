@@ -101,6 +101,8 @@
         }
 
         .user-card-content {
+            margin-left: 1em;
+            margin-right:1em;
             text-align: center;
 
             .user-card-name {

@@ -1,7 +1,12 @@
 <template>
     <div class="p-grid p-fluid layout-dashboard">
-        <div class="p-col-12">
+        <div class="p-col-12" style="padding-top: 36px;">
             <div class="card card-w-title">
+                <Panel>
+                    <template #header>
+                        <div style="text-align: center;font-size: 1.3em;">Checklist</div>
+
+                    </template>
                 <h1>How to become a "COVID-free" facility!</h1>
 
                 <p>Below you can find, for each certifcation level, the list of anti-corona measures that need to be implemented by an accommodation provider.</p>
@@ -47,6 +52,7 @@
                         </div>
                     </AccordionTab>
                 </Accordion>
+                </Panel>
             </div>
         </div>
     </div>
