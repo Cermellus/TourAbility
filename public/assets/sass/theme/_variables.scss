@@ -82,9 +82,9 @@ $buttonWithRightIconPadding:0.429em 2em 0.429em 1em;
 $buttonIconOnlyPadding:0.429em;
 $buttonIconOnlyWidth:2.143em;
 
-$buttonBgColor:$primaryColor;
-$buttonBorder:1px solid $primaryColor;
-$buttonTextColor:$primaryTextColor;
+$buttonBgColor:$primaryLighterColor;
+$buttonBorder:0px solid $primaryColor;
+$buttonTextColor:$primaryColor;
 
 $buttonHoverBgColor:$primaryDarkColor;
 $buttonHoverTextColor:$primaryTextColor;
@@ -179,17 +179,17 @@ $radiobuttonTransition:background-color $transitionDuration, border-color $trans
 
 //togglebutton
 $toggleButtonBgColor:#E0E0E0;
-$toggleButtonBorder:1px solid #E0E0E0;
+$toggleButtonBorder:0px solid #E0E0E0;
 $toggleButtonTextColor:$textColor;
 $toggleButtonIconColor:$textSecondaryColor;
 $toggleButtonHoverBgColor:$primaryLighterColor;
 $toggleButtonHoverBorderColor:$primaryLighterColor;
 $toggleButtonHoverTextColor:$primaryDarkerColor;
 $toggleButtonHoverIconColor:$primaryColor;
-$toggleButtonActiveBgColor:$primaryColor;
+$toggleButtonActiveBgColor:$primaryLighterColor;
 $toggleButtonActiveBorderColor:$primaryColor;
 $toggleButtonActiveTextColor:$primaryTextColor;
-$toggleButtonActiveIconColor:$primaryTextColor;
+$toggleButtonActiveIconColor:$primaryColor;
 $toggleButtonActiveHoverBgColor:$primaryDarkColor;
 $toggleButtonActiveHoverBorderColor:$primaryDarkerColor;
 $toggleButtonActiveHoverTextColor:$primaryTextColor;

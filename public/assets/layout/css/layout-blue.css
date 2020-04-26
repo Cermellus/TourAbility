@@ -71,10 +71,10 @@ html {
 }
 
 body {
-  font-family: "cabin", sans-serif;
-  font-size: 14px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
   font-weight: 400;
-  color: #212121;
+  color: #2E2824;
   -webkit-font-smoothing: antialiased;
   padding: 0;
   margin: 0;
@@ -357,12 +357,12 @@ a {
   margin-left: 8px;
 }
 .layout-wrapper .layout-topbar .topbar-menu > li > ul button:hover {
-  background-color: #e0e0e0;
+  background-color: transparent;
 }
 .layout-wrapper .layout-topbar .topbar-menu > li > ul button:focus {
-  -webkit-box-shadow: 0 0 0 0 #e0e0e0;
-  -moz-box-shadow: 0 0 0 0 #e0e0e0;
-  box-shadow: 0 0 0 0 #e0e0e0;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
 }
 .layout-wrapper .layout-topbar .topbar-menu > li.active-topmenuitem > ul {
   display: block;
@@ -461,13 +461,13 @@ a {
     color: #727272;
   }
   .layout-wrapper .layout-topbar .topbar-menu > li button:hover {
-    background-color: #e0e0e0;
-    color: #212121;
+    background-color: transparent;
+    color: #2E2824;
   }
   .layout-wrapper .layout-topbar .topbar-menu > li button:focus {
-    -webkit-box-shadow: 0 0 0 0 #e0e0e0;
-    -moz-box-shadow: 0 0 0 0 #e0e0e0;
-    box-shadow: 0 0 0 0 #e0e0e0;
+    -webkit-box-shadow: 0 0 0 0 transparent;
+    -moz-box-shadow: 0 0 0 0 transparent;
+    box-shadow: 0 0 0 0 transparent;
   }
   .layout-wrapper .layout-topbar .topbar-menu > li button .topbar-item-name {
     display: inline-block;
@@ -632,9 +632,9 @@ a {
   vertical-align: middle;
 }
 .layout-wrapper .layout-menu-container .layout-profile .layout-profile-menu li button:focus {
-  -webkit-box-shadow: 0 0 0 0 #e0e0e0;
-  -moz-box-shadow: 0 0 0 0 #e0e0e0;
-  box-shadow: 0 0 0 0 #e0e0e0;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
 }
 .layout-wrapper .layout-menu-container .layout-menu {
   list-style-type: none;
@@ -809,12 +809,12 @@ a {
   color: #727272;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-profile .layout-profile-button:hover {
-  background-color: #e0e0e0;
+  background-color: transparent;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-profile .layout-profile-button:focus {
-  -webkit-box-shadow: 0 0 0 0 #e0e0e0;
-  -moz-box-shadow: 0 0 0 0 #e0e0e0;
-  box-shadow: 0 0 0 0 #e0e0e0;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-profile .layout-profile-menu button {
   color: #727272;
@@ -823,12 +823,12 @@ a {
   color: #727272;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-profile .layout-profile-menu button:hover {
-  background-color: #e0e0e0;
+  background-color: transparent;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-profile .layout-profile-menu button:focus {
-  -webkit-box-shadow: 0 0 0 0 #e0e0e0;
-  -moz-box-shadow: 0 0 0 0 #e0e0e0;
-  box-shadow: 0 0 0 0 #e0e0e0;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu li a .layout-menuitem-text {
   color: #727272;
@@ -838,7 +838,7 @@ a {
   color: #727272;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu li a:hover {
-  background-color: #e0e0e0;
+  background-color: transparent;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu li a.active-route .layout-menuitem-text, .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu li a.active-route .layout-menuitem-icon {
   color: #fde3d7;
@@ -1291,7 +1291,7 @@ a {
     color: #727272;
   }
   .layout-wrapper.layout-horizontal .layout-menu-container .layout-profile .layout-profile-menu li button:hover {
-    background-color: #e0e0e0;
+    background-color: transparent;
   }
   .layout-wrapper.layout-horizontal .layout-menu-container .layout-profile.layout-profile-active .layout-profile-menu {
     display: block;
@@ -1461,12 +1461,12 @@ a {
   transition: color 0.3s;
 }
 .layout-footer .footer-icons button:hover {
-  color: #212121;
+  color: #2E2824;
 }
 .layout-footer .footer-icons button:focus {
-  -webkit-box-shadow: 0 0 0 0 #212121;
-  -moz-box-shadow: 0 0 0 0 #212121;
-  box-shadow: 0 0 0 0 #212121;
+  -webkit-box-shadow: 0 0 0 0 #2E2824;
+  -moz-box-shadow: 0 0 0 0 #2E2824;
+  box-shadow: 0 0 0 0 #2E2824;
 }
 
 /* Utils */
@@ -1996,7 +1996,7 @@ a {
   border-radius: 3px;
 }
 .layout-dashboard .timeline ul li .timeline-content h3 {
-  color: #212121;
+  color: #2E2824;
   font-size: 14px;
   margin: 0;
   font-weight: 700;
@@ -2151,7 +2151,7 @@ a {
   background-color: transparent;
   outline: 0 none;
   color: #727272;
-  font-family: "cabin", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
 }
 .layout-dashboard .live-support .new-message .p-col-fixed {
   width: 100px;
@@ -2188,7 +2188,7 @@ a {
   font-size: 28px;
   font-weight: 500;
   margin: 14px 0;
-  color: #212121;
+  color: #2E2824;
 }
 .exception-body .exception-content h1 .exception-name {
   color: #727272;
@@ -2257,7 +2257,7 @@ a {
   font-size: 28px;
   font-weight: 500;
   margin: 14px 0;
-  color: #212121;
+  color: #2E2824;
 }
 .login-body .login-content h1 span {
   color: #727272;
@@ -2678,24 +2678,6 @@ a {
     font-size: 14px;
     max-width: 250px;
   }
-}
-/* cabin-300 - latin-ext_latin */
-@font-face {
-  font-family: "Barlow Condensed", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-}
-/* cabin-regular - latin-ext_latin */
-@font-face {
-  font-family: "Barlow Condensed", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-}
-/* cabin-700 - latin-ext_latin */
-@font-face {
-  font-family: "Barlow Condensed", sans-serif;
-  font-style: normal;
-  font-weight: 700;
 }
 /* Add your customizations of layout here */
 

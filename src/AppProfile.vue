@@ -9,7 +9,7 @@
             </div>
 
             <div class="user-detail">
-                <div class="overview-box sales">
+                <div class="overview-box box1">
                     <i class="overview-icon pi pi-dollar"></i>
                     <span class="overview-title">Sales</span>
                     <i class="overview-arrow pi pi-chevron-circle-up"></i>
@@ -20,7 +20,7 @@
                         21% more than yesterday
                     </div>
                 </div>
-                <div class="overview-box views">
+                <div class="overview-box box2">
                     <i class="overview-icon pi pi-search"></i>
                     <span class="overview-title">Views</span>
                     <i class="overview-arrow pi pi-chevron-circle-up"></i>
@@ -31,7 +31,7 @@
                         2% more than yesterday
                     </div>
                 </div>
-                <div class="overview-box users">
+                <div class="overview-box box3">
                     <i class="overview-icon pi pi-users"></i>
                     <span class="overview-title">Users</span>
                     <i class="overview-arrow pi pi-chevron-circle-up"></i>
@@ -40,17 +40,6 @@
                     </div>
                     <div class="overview-subinfo">
                         7% more than yesterday
-                    </div>
-                </div>
-                <div class="overview-box checkin">
-                    <i class="overview-icon pi pi-map-marker"></i>
-                    <span class="overview-title">Check-Ins</span>
-                    <i class="overview-arrow pi pi-chevron-circle-up"></i>
-                    <div class="overview-numbers">
-                        4211
-                    </div>
-                    <div class="overview-subinfo">
-                        18% more than yesterday
                     </div>
                 </div>
             </div>
@@ -75,8 +64,27 @@
 </script>
 
 <style lang="scss" scoped>
+    .box1{
+        color: #2E2824;
+        background-color: #EBDFDA;
+        margin-bottom: 1em;
+        border-radius: 1em;
+    }
+    .box2{
+        color: #2E2824;
+        background-color: #D7C3B9;
+        margin-bottom: 1em;
+        border-radius: 1em;
+    }
+    .box3{
+        color: #2E2824;
+        background-color: #C3B1A9;
+        margin-bottom: 1em;
+        border-radius: 1em;
+    }
     .user-card {
-        margin-top: 70px;
+        background: transparent;
+        margin-top: 80px;
 
         .user-card-header {
             background: transparent;
@@ -87,6 +95,8 @@
             img {
                 max-width: 150px;
                 height: auto;
+                border: solid 1px #F9C5AF;
+                border-radius: 100%;
             }
         }
 
