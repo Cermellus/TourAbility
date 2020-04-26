@@ -121,21 +121,21 @@ body {
             outline: 0 none;
             @include transition($buttonTransition);
             @include border-radius(0);
-    
+
             .p-button-icon-left {
                 color: $toggleButtonIconColor;
             }
-    
+
             &:not(.p-disabled):not(.p-highlight):hover {
                 background-color: $toggleButtonHoverBgColor;
                 border-color: $toggleButtonHoverBorderColor;
                 color: $toggleButtonHoverTextColor;
-    
+
                 .p-button-icon-left {
                     color: $toggleButtonHoverIconColor;
                 }
             }
-    
+
             &.p-focus,
             &:focus {
                 border-color: $toggleButtonFocusBorderColor;
@@ -147,12 +147,12 @@ body {
                     color: $toggleButtonFocusIconColor;
                 }
             }
-    
+
             &.p-highlight {
                 background-color: $toggleButtonActiveBgColor;
                 border-color: $toggleButtonActiveBorderColor;
                 color: $toggleButtonActiveTextColor;
-    
+
                 .p-button-icon-left {
                     color: $toggleButtonActiveIconColor;
                 }
@@ -161,7 +161,7 @@ body {
                     background-color: $toggleButtonActiveHoverBgColor;
                     border-color: $toggleButtonActiveHoverBorderColor;
                     color: $toggleButtonActiveHoverTextColor;
-    
+
                     .p-button-icon-left {
                         color: $toggleButtonActiveHoverIconColor;
                     }
@@ -186,7 +186,7 @@ body {
                 &:first-child {
                     @include border-radius-right(0);
                 }
-    
+
                 &.p-splitbutton-menubutton {
                     @include border-radius-left(0);
                 }
@@ -195,11 +195,11 @@ body {
                     z-index: 1;
                 }
             }
-    
+
             .p-menu {
                 min-width: 100%;
             }
-    
+
             .p-splitbutton-menubutton {
                 .p-button-icon-left {
                     @include icon_override("\e902");

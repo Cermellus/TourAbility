@@ -15,15 +15,12 @@
 
 		</div>
 
-		<AppFooter/>
-
 		<div v-if="staticMenuMobileActive" class="layout-mask"></div>
 	</div>
 </template>
 
 <script>
 import AppTopBar from './AppTopbar.vue';
-import AppFooter from './AppFooter.vue';
 import AppProfile from './AppProfile.vue';
 import EventBus from './event-bus';
 
@@ -45,10 +42,9 @@ export default {
 	},
 	created: function(){
 		this.menu = [
-			{label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/'},
-			{label: 'My Accommodations', icon: 'pi pi-fw pi-th-large', to: '/accommodations'},
-			{label: 'My Certifications', icon: 'pi pi-fw pi-star-o', to: '/certifications'},
-			{label: 'My Courses', icon: 'pi pi-fw pi-table', to: '/courses'}
+			{label: 'My Accommodations', to: '/accommodations'},
+			{label: 'My Certifications', to: '/certifications'},
+			{label: 'My Courses', to: '/courses'}
 		];
     },
     watch: {
@@ -195,7 +191,6 @@ export default {
 	},
 	components: {
 		'AppTopBar': AppTopBar,
-		'AppFooter': AppFooter,
 		'AppProfile': AppProfile
 	}
 }

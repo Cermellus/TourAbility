@@ -64,8 +64,22 @@
 }
 @media screen and (min-width: 897px) {
   .layout-wrapper {
+    .layout-topbar {
+      height: 80px!important;
+    }
     &.layout-horizontal {
       .layout-menu-container {
+        .layout-menu{
+
+           li a .layout-menuitem-text{
+             &:active,
+             &:hover{
+               color: #fff!important;
+             }
+          }
+          font-size: 1.4em;
+          margin-top: 0.4em!important;
+        }
         width: 50%!important;
         top: 7px!important;
         left: 25%;
@@ -74,7 +88,7 @@
       }
 
       .layout-main {
-        padding-top: 60px!important;
+        padding-top: 80px!important;
       }
 
       &.layout-menu-light {

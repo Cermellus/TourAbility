@@ -1,191 +1,191 @@
 [{
-	"id": 1,
-	"published": true,
-	"name": "structure one",
-	"location": {
-		"country": "Italy",
-		"state": "Italy",
-		"region": "Lombardy",
-		"council": "Milan"
-	},
-	"certifications": {
-			"level1": {
-				"id": 1,
-				"checklist": [{
-						"title":"point a",
-						"values": [true,true]
-					},
-					{
-						"title":"point b",
-						"values": [true,true]
-					},
-					{
-							"title":"point c",
-						"values": [true,true]
-					},
-					{
-						"title":"point d",
-						"values": [true,true]
-					}
-				],
-				"status": "certified"
-			},
-			"level2": {
-				"id": 2,
-				"checklist": [
-					{
-						"title":"point a",
-						"values": [true,false]
-					},
-					{
-						"title":"point b",
-						"values": [true,false]
-					},
-					{
-							"title":"point c",
-						"values": [true,false]
-					},
-					{
-						"title":"point d",
-						"values": [true,false]
-					},
-					{
-						"title":"point e",
-						"values": [true,false]
-					},
-					{
-						"title":"point f",
-						"values": [true,false]
-					},
-					{
-							"title":"point g",
-						"values": [true,false]
-					}
-				],
-				"status": "inprogress"
-			}
-	}
-	,
-	"landmarks": [
-		1
-	],
-	"image": "structure1",
-	"availability":{
-		"2020-07-01":"2020-08-10",
-		"2020-07-20":"2020-08-25",
-		"2020-08-01":"2020-08-10",
-		"2020-08-15":"2020-08-30",
-		"2020-09-05":"2020-09-15"
-	}
+    "id": 1,
+    "published": true,
+    "name": "structure one",
+    "location": {
+        "country": "Italy",
+        "state": "Italy",
+        "region": "Lombardy",
+        "council": "Milan"
+    },
+    "certifications": {
+            "level1": {
+                "id": 1,
+                "checklist": [{
+                        "title":"point a",
+                        "values": [true,true]
+                    },
+                    {
+                        "title":"point b",
+                        "values": [true,true]
+                    },
+                    {
+                            "title":"point c",
+                        "values": [true,true]
+                    },
+                    {
+                        "title":"point d",
+                        "values": [true,true]
+                    }
+                ],
+                "status": "certified"
+            },
+            "level2": {
+                "id": 2,
+                "checklist": [
+                    {
+                        "title":"point a",
+                        "values": [true,false]
+                    },
+                    {
+                        "title":"point b",
+                        "values": [true,false]
+                    },
+                    {
+                            "title":"point c",
+                        "values": [true,false]
+                    },
+                    {
+                        "title":"point d",
+                        "values": [true,false]
+                    },
+                    {
+                        "title":"point e",
+                        "values": [true,false]
+                    },
+                    {
+                        "title":"point f",
+                        "values": [true,false]
+                    },
+                    {
+                            "title":"point g",
+                        "values": [true,false]
+                    }
+                ],
+                "status": "inprogress"
+            }
+    }
+    ,
+    "landmarks": [
+        1
+    ],
+    "image": "structure1",
+    "availability":{
+        "2020-07-01":"2020-08-10",
+        "2020-07-20":"2020-08-25",
+        "2020-08-01":"2020-08-10",
+        "2020-08-15":"2020-08-30",
+        "2020-09-05":"2020-09-15"
+    }
 },
 {
-	"id": 2,
-	"published": true,
-	"name": "structure two",
-	"image": "structure2",
-	"location": {
-		"country": "Italy",
-		"state": "Italy",
-		"region": "Tuscany",
-		"council": "Florence"
-	},
-	"certifications": {
-		"level1": {
-			"id": 1,
-			"checklist": [
-				{
-					"title":"point a",
-					"vG":true,
-					"vI":true
-				},
-				{
-					"title":"point b",
-					"vG":true,
-					"vI":true
-				},
-				{
-						"title":"point c",
-						"vG":true,
-						"vI":true
-				},
-				{
-					"title":"point d",
-					"vG":true,
-					"vI":true
-				}
-			],
-			"status": "certified"
-		},
-		"level2": {
-			"id": 2,
-			"checklist": [
-				{
-					"title":"point a",
-					"vG":true,
-					"vI":true
-				},
-				{
-					"title":"point b",
-					"vG":true,
-					"vI":true
-				},
-				{
-						"title":"point c",
-						"vG":true,
-						"vI":true
-				},
-				{
-					"title":"point d",
-					"vG":true,
-					"vI":true
-				},
-				{
-					"title":"point e",
-					"vG":true,
-					"vI":true
-				},
-				{
-					"title":"point f",
-					"vG":true,
-					"vI":true
-				},
-				{
-						"title":"point g",
-						"vG":true,
-						"vI":true
-				}
-			],
-			"status": "certified"
-		},
-		"landmarks": [],
-		"availability": {
-			"2020-07-01": "2020-08-10",
-			"2020-07-20": "2020-08-25",
-			"2020-08-01": "2020-08-10",
-			"2020-08-15": "2020-08-30",
-			"2020-09-05": "2020-09-15"
-		}
-	}
+    "id": 2,
+    "published": true,
+    "name": "structure two",
+    "image": "structure2",
+    "location": {
+        "country": "Italy",
+        "state": "Italy",
+        "region": "Tuscany",
+        "council": "Florence"
+    },
+    "certifications": {
+        "level1": {
+            "id": 1,
+            "checklist": [
+                {
+                    "title":"point a",
+                    "vG":true,
+                    "vI":true
+                },
+                {
+                    "title":"point b",
+                    "vG":true,
+                    "vI":true
+                },
+                {
+                        "title":"point c",
+                        "vG":true,
+                        "vI":true
+                },
+                {
+                    "title":"point d",
+                    "vG":true,
+                    "vI":true
+                }
+            ],
+            "status": "certified"
+        },
+        "level2": {
+            "id": 2,
+            "checklist": [
+                {
+                    "title":"point a",
+                    "vG":true,
+                    "vI":true
+                },
+                {
+                    "title":"point b",
+                    "vG":true,
+                    "vI":true
+                },
+                {
+                        "title":"point c",
+                        "vG":true,
+                        "vI":true
+                },
+                {
+                    "title":"point d",
+                    "vG":true,
+                    "vI":true
+                },
+                {
+                    "title":"point e",
+                    "vG":true,
+                    "vI":true
+                },
+                {
+                    "title":"point f",
+                    "vG":true,
+                    "vI":true
+                },
+                {
+                        "title":"point g",
+                        "vG":true,
+                        "vI":true
+                }
+            ],
+            "status": "certified"
+        },
+        "landmarks": [],
+        "availability": {
+            "2020-07-01": "2020-08-10",
+            "2020-07-20": "2020-08-25",
+            "2020-08-01": "2020-08-10",
+            "2020-08-15": "2020-08-30",
+            "2020-09-05": "2020-09-15"
+        }
+    }
 },
 {
-	"id": 3,
-	"published": false,
-	"name": "structure three",
-	"location": {
-		"country": "Italy",
-		"state": "Italy",
-		"region": "Veneto",
-		"council": "Venetia"
-	},
-	"certifications": {},
-	"landmarks": [],
-	"image": "structure3",
-	"availability":{
-		"2020-07-01":"2020-08-10",
-		"2020-07-20":"2020-08-25",
-		"2020-08-01":"2020-08-10",
-		"2020-08-15":"2020-08-30",
-		"2020-09-05":"2020-09-15"
-	}
+    "id": 3,
+    "published": false,
+    "name": "structure three",
+    "location": {
+        "country": "Italy",
+        "state": "Italy",
+        "region": "Veneto",
+        "council": "Venetia"
+    },
+    "certifications": {},
+    "landmarks": [],
+    "image": "structure3",
+    "availability":{
+        "2020-07-01":"2020-08-10",
+        "2020-07-20":"2020-08-25",
+        "2020-08-01":"2020-08-10",
+        "2020-08-15":"2020-08-30",
+        "2020-09-05":"2020-09-15"
+    }
 }
 ]

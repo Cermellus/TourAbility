@@ -10,7 +10,7 @@
         </div>
 
 		<button class="layout-topbar-logo p-link">
-			<img id="layout-topbar-logo" alt="babylon-layout" src="assets/layout/images/logo-white.png"/>
+			<img id="layout-topbar-logo" alt="babylon-layout" src="assets/layout/images/tourability_logo.png"/>
 		</button>
 
 		<button class="layout-menu-button p-link" @click="onMenuButtonClick">
@@ -24,37 +24,9 @@
 		<ul :class="topbarItemsClass">
 			<li v-if="profileMode === 'popup' || horizontal" :class="['user-profile', {'active-topmenuitem': activeTopbarItem === 'profile'}]"
 				@click="$emit('topbar-item-click',{originalEvent:$event,item:'profile'})">
-				<button class="p-link">
-					<img alt="babylon-layout" src="assets/layout/images/avatar_1.png"/>
-					<span class="topbar-item-name">Arlene Welch</span>
+				<button class="p-link signout">
+					<i class="pi pi-sign-out"></i>
 				</button>
-
-				<ul class="fadeInDown">
-					<li role="menuitem">
-						<button class="p-link">
-							<i class="pi pi-user"></i>
-							<span>Profile</span>
-						</button>
-					</li>
-					<li role="menuitem">
-						<button class="p-link">
-							<i class="pi pi-cog"></i>
-							<span>Settings</span>
-						</button>
-					</li>
-					<li role="menuitem">
-						<button class="p-link">
-							<i class="pi pi-envelope"></i>
-							<span>Message</span>
-						</button>
-					</li>
-					<li role="menuitem">
-						<button class="p-link">
-							<i class="pi pi-bell"></i>
-							<span>Notifications</span>
-						</button>
-					</li>
-				</ul>
 			</li>
 		</ul>
 	</div>
@@ -110,3 +82,25 @@ export default {
 
 }
 </script>
+<style lang="scss" scoped>
+	.layout-topbar-logo{
+		width: 25%;
+		padding: 0;
+		img {
+			margin: -2px!important;
+			width: 100%;
+			height: auto!important;
+			min-height: 50px!important;
+			max-height: 80px!important;
+			min-width: 230px!important;
+			max-width: 350px!important;
+			padding-right: 1em;
+
+		}
+	}
+	.signout i{
+		color: #FDE3d7;
+		padding-top: 1em;
+		font-size: 1.7em;
+	}
+</style>
