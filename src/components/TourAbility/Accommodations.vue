@@ -2,27 +2,27 @@
     <div>
 
         <div class="p-grid p-fluid" style="margin-top:30px;margin-bottom:30px;">
-            <div class="p-col-1 p-lg-1">
+            <div class="p-col-1 p-lg-1" style="min-width: 10em;">
                 <ToggleButton v-model="fc1" @change="fcSimulation(1)" onLabel="All" offLabel="All" onIcon="pi pi-check"
                               offIcon="pi pi-times"/>
             </div>
-            <div class="p-col-2 p-lg-2">
+            <div class="p-col-2 p-lg-2" style="min-width: 10em;">
                 <ToggleButton v-model="fc2" @change="fcSimulation(2)" onLabel="Online" offLabel="Online"
                               onIcon="pi pi-check" offIcon="pi pi-times"/>
             </div>
-            <div class="p-col-2 p-lg-2">
+            <div class="p-col-2 p-lg-2" style="min-width: 10em;">
                 <ToggleButton v-model="fc3" @change="fcSimulation(3)" onLabel="Unpublished" offLabel="Unpublished"
                               onIcon="pi pi-check" offIcon="pi pi-times"/>
             </div>
-            <div class="p-col-2 p-lg-2">
+            <div class="p-col-2 p-lg-2" style="min-width: 10em;">
                 <ToggleButton v-model="fc4" @change="fcSimulation(4)" onLabel="Level 1"
                               offLabel="Level 1" onIcon="pi pi-check" offIcon="pi pi-times"/>
             </div>
-            <div class="p-col-2 p-lg-2">
+            <div class="p-col-2 p-lg-2" style="min-width: 10em;">
                 <ToggleButton v-model="fc5" @change="fcSimulation(5)" onLabel="Level 2"
                               offLabel="Level 2" onIcon="pi pi-check" offIcon="pi pi-times"/>
             </div>
-            <div class="p-col-2 p-lg-2">
+            <div class="p-col-2 p-lg-2" style="min-width: 10em;">
                 <ToggleButton v-model="fc6" @change="fcSimulation(6)" onLabel="Level 3"
                               offLabel="Level 3" onIcon="pi pi-check" offIcon="pi pi-times"/>
             </div>
@@ -61,25 +61,30 @@
                                 </div>
 
                                 <div class="p-col-3">
-                                    <div v-if="!getCertificationTitle(slotProps.data.certifications)">
-                                        <span class="team-member-role">Not certified</span>
+                                    <div v-if="!getCertification(slotProps.data.certifications)">
+                                        <span class="certification">Not certified</span>
                                     </div>
                                     <div v-else>
-                                        <vue-fontawesome icon="certificate" style="fontSize:1.5em;color:#ffc107;"/>
-                                        <span class="team-member-role"> {{getCertificationTitle(slotProps.data.certifications)}}</span>
+                                        <vue-fontawesome icon="certificate" style="margin-top:0.05em;fontSize:1.5em;color:#ffc107;"/>
+                                        <span :class="'certification lev-'+getCertification(slotProps.data.certifications).id">{{getCertification(slotProps.data.certifications).title}}</span>
                                     </div>
                                 </div>
 
 
                             </div>
                         </div>
-                        <Button icon="pi pi-plus" @click="open(slotProps.data)"></Button>
+                        <div style="text-align: right">
+                            <Button icon="pi pi-list" style="margin-right: 0.5em;" @click="open(slotProps.data)"/>
+                            <Button v-if="slotProps.data.published" icon="fa fa-eye-slash" @click="unpublish(slotProps.data)"/>
+                            <Button v-else icon="fa fa-eye" @click="publish(slotProps.data)"/>
+                        </div>
+
                     </div>
                 </div>
             </template>
             <template #grid="slotProps">
-                <div style="padding: .5em" class="p-col-12 p-md-3">
-                    <Panel :header="slotProps.data.vin" style="text-align: center">
+                <div style="padding: .4em;min-width: 350px;" class="p-col-12 p-md-3">
+                    <Panel :header="slotProps.data.vin" style="text-align: center;">
                         <img :src="'assets/layout/images/structures/' + slotProps.data.image + '.jpeg'"
                              :alt="slotProps.data.image"/>
                         <div class="car-detail">{{slotProps.data.name}} - {{slotProps.data.location.council}}</div>
@@ -90,23 +95,26 @@
                         </div>
 
                         <div class="p-col-12">
-                            <div v-if="!getCertificationTitle(slotProps.data.certifications)">
-                                <span class="team-member-role">Not certified</span>
+                            <div v-if="!getCertification(slotProps.data.certifications)">
+                                <span class="certification">Not certified</span>
                             </div>
                             <div v-else>
                                 <vue-fontawesome icon="certificate" style="fontSize:1.5em;color:#ffc107;"/>
-                                <span class="team-member-role">{{getCertificationTitle(slotProps.data.certifications)}}</span>
+                                <span :class="'certification lev-'+getCertification(slotProps.data.certifications).id">{{getCertification(slotProps.data.certifications).title}}</span>
                             </div>
                         </div>
 
-                        <Button icon="pi pi-plus" @click="open(slotProps.data)"></Button>
-                    </Panel>
+                        <div style="text-align: center">
+                            <Button icon="pi pi-list" style="margin-right: 0.5em;" @click="open(slotProps.data)"/>
+                            <Button v-if="slotProps.data.published" icon="fa fa-eye-slash" @click="unpublish(slotProps.data)"/>
+                            <Button v-else icon="fa fa-eye" @click="publish(slotProps.data)"/>
+                        </div>                    </Panel>
                 </div>
             </template>
         </DataView>
 
 
-        <Dialog :header="'Request for certification '+dialogTitle" :position="'top'" :visible.sync="display" :style="{width: '80%'}"
+        <Dialog :header="'Request for certification '+dialogTitle" :position="'top'" :visible.sync="display" :style="{width: '100%'}"
                 :modal="true" :closable="false">
 
             <div v-if="showBLev1">
@@ -158,6 +166,7 @@
             <template #footer>
                 <!--<Button label="Yes" @click="close" icon="pi pi-check"/>-->
                 <Button label="Close" @click="close" icon="pi pi-times" class="p-button-secondary"/>
+                <Button label="Confirm" @click="close" icon="pi pi-check" class="p-button-primary"/>
             </template>
         </Dialog>
 
@@ -253,6 +262,12 @@
 
                 this.display = true;
             },
+            publish(structure){
+                structure.published = true;
+            },
+            unpublish(structure){
+                structure.published = false;
+            },
             close() {
                 this.certifications = false;
                 this.display = false;
@@ -303,16 +318,16 @@
                     this.sortKey = sortValue;
                 }
             },
-            getCertificationTitle(certifications) {
+            getCertification(certifications) {
                 if (certifications) {
                     if (certifications.level1 && certifications.level1.status === 'certified') {
                         if (certifications.level2 && certifications.level2.status === 'certified') {
                             if (certifications.level3 && certifications.level3.status === 'certified') {
-                                return "Level 3";
+                                return {id:3,"title":"Level 2"};
                             }
-                            return "Level 2";
+                            return {id:2,"title":"Level 2"};
                         }
-                        return "Level 1";
+                        return {id:1,"title":"Level 1"};
                     }
                 }
                 return null;
@@ -390,5 +405,22 @@
             color: #e30613 !important;
             border: 1px solid #EBDFDA;
         }
+    }
+    .certification{
+        margin-left: 0.9em;
+        font-size: 14px;
+        border-radius: 4px;
+        padding: 4px;
+        color: #ffffff;
+        background-color: #C3B1A9;
+    }
+    .lev-1{
+        background-color: #69bcff;
+    }
+    .lev-2{
+        background-color: #ee6509;
+    }
+    .lev-3{
+        background-color: #32c104;
     }
 </style>
