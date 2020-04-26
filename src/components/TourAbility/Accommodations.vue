@@ -129,8 +129,8 @@
                         <div class="card card-w-title tasks">
                             <h1>Cert. level 1</h1>
                             <ul>
-                                <li v-for="cert in CL1.checklist" :key="cert.id">
-                                    <Checkbox name="task" value="report" v-model="tasksCheckbox"/>
+                                <li v-for="(cert, index) in CL1.checklist" :key="index">
+                                    <Checkbox :name="index" :value="cert.title" v-model="tasksCheckbox"/>
                                     <span>{{cert.title}}</span>
                                     <span class="task-badge red"></span>
                                 </li>
@@ -150,8 +150,8 @@
                         <div class="card card-w-title tasks">
                             <h1>Cert. level 2</h1>
                             <ul>
-                                <li v-for="cert in CL2.checklist" :key="cert.id">
-                                    <Checkbox name="task" value="reports" v-model="tasksCheckbox"/>
+                                <li v-for="(cert, index) in CL2.checklist" :key="index">
+                                    <Checkbox :name="index" :value="cert.title" v-model="tasksCheckbox"/>
                                     <span>{{cert.title}}</span>
                                     <span class="task-badge red"></span>
                                 </li>
