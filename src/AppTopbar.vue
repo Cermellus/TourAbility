@@ -17,18 +17,9 @@
 			<i class="pi pi-bars"></i>
 		</button>
 
-		<button id="topbar-menu-button" class="p-link"  @click="onTopbarMenuButtonClick">
-			<i class="pi pi-ellipsis-v"></i>
+		<button class="p-link signout">
+			<i class="pi pi-sign-out"></i>
 		</button>
-
-		<ul :class="topbarItemsClass">
-			<li v-if="profileMode === 'popup' || horizontal" :class="['user-profile', {'active-topmenuitem': activeTopbarItem === 'profile'}]"
-				@click="$emit('topbar-item-click',{originalEvent:$event,item:'profile'})">
-				<button class="p-link signout">
-					<i class="pi pi-sign-out"></i>
-				</button>
-			</li>
-		</ul>
 	</div>
 </template>
 
@@ -87,7 +78,7 @@ export default {
 		width: 25%;
 		padding: 0;
 		img {
-			margin: -2px!important;
+			margin: -2px -2px -2px -60%!important;
 			width: 100%;
 			height: auto!important;
 			min-height: 50px!important;
@@ -99,8 +90,22 @@ export default {
 		}
 	}
 	.signout i{
+		position: fixed;
+		top:0.5em;
+		right: 1em;
+		z-index: 999;
 		color: #FDE3d7;
-		padding-top: 1em;
 		font-size: 1.7em;
 	}
+
+	@media screen and (min-width: 897px) {
+		.layout-topbar-logo{
+			img {
+				margin: -2px!important;}
+		}
+		.signout i{
+			top:1em;
+		}
+	}
+
 </style>

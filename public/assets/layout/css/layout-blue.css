@@ -176,12 +176,12 @@ a {
   font-size: 28px;
 }
 .layout-wrapper .layout-topbar .layout-menu-button:hover {
-  background-color: #fde3d7;
+  background-color: transparent;
 }
 .layout-wrapper .layout-topbar .layout-menu-button:focus {
-  -webkit-box-shadow: 0 0 0 0 #fde3d7;
-  -moz-box-shadow: 0 0 0 0 #fde3d7;
-  box-shadow: 0 0 0 0 #fde3d7;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
 }
 .layout-wrapper .layout-topbar #topbar-menu-button {
   cursor: pointer;
@@ -206,12 +206,12 @@ a {
   font-size: 28px;
 }
 .layout-wrapper .layout-topbar #topbar-menu-button:hover {
-  background-color: #fde3d7;
+  background-color: transparent;
 }
 .layout-wrapper .layout-topbar #topbar-menu-button:focus {
-  -webkit-box-shadow: 0 0 0 0 #fde3d7;
-  -moz-box-shadow: 0 0 0 0 #fde3d7;
-  box-shadow: 0 0 0 0 #fde3d7;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
 }
 .layout-wrapper .layout-topbar .topbar-menu {
   float: right;
@@ -250,12 +250,12 @@ a {
   margin-top: 4px;
 }
 .layout-wrapper .layout-topbar .topbar-menu > li > button:hover {
-  background-color: #fde3d7;
+  background-color: transparent;
 }
 .layout-wrapper .layout-topbar .topbar-menu > li > button:focus {
-  -webkit-box-shadow: 0 0 0 0 #fde3d7;
-  -moz-box-shadow: 0 0 0 0 #fde3d7;
-  box-shadow: 0 0 0 0 #fde3d7;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
 }
 .layout-wrapper .layout-topbar .topbar-menu > li > button .topbar-item-name {
   display: none;
