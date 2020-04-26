@@ -33,7 +33,7 @@ export default {
 					label: 'Sales',
 					data: [12, 19, 3, 5, 2, 3, 9],
 					borderColor: [
-						'#7E57C2',
+						'#E30613',
 					],
 					borderWidth: 3,
 					borderDash: [5, 5],
@@ -46,7 +46,7 @@ export default {
 						'rgba(187,222,251,0.2)',
 					],
 					borderColor: [
-						'#42A5F5',
+						'#FDE7DD',
 					],
 					borderWidth: 3,
 					fill: true
@@ -55,7 +55,7 @@ export default {
 						label: 'Expenses',
 						data: [7, 12, 15, 5, 3, 13, 21],
 						borderColor: [
-							'#FFB300',
+							'#EBDFDA',
 						],
 						borderWidth: 3,
 						fill: false,
@@ -65,7 +65,7 @@ export default {
 						label: 'New Users',
 						data: [3, 7, 2, 17, 15, 13, 19],
 						borderColor: [
-							'#66BB6A',
+							'#D7C3B9',
 						],
 						borderWidth: 3,
 						fill: false
@@ -81,20 +81,20 @@ export default {
 						14
 					],
 					backgroundColor: [
-						"#FFC107",
-						"#03A9F4",
-						"#4CAF50",
-						"#E91E63",
-						"#9C27B0"
+						"#E30613",
+						"#FDE7DD",
+						"#EBDFDA",
+						"#D7C3B9",
+						"#C3B1A9"
 					],
 					label: 'My dataset'
 				}],
 				labels: [
-					"Yellow",
-					"Blue",
-					"Green",
-					"Pink",
-					"Purple"
+					"Item 1",
+					"Item 2",
+					"Item 3",
+					"Item 4",
+					"Item 5"
 				]
 			},
 
