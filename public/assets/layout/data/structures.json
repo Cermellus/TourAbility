@@ -12,42 +12,54 @@
 			"level1": {
 				"id": 1,
 				"checklist": [{
-						"point a": [true,true]
+						"title":"point a",
+						"values": [true,true]
 					},
 					{
-						"point b": [true,true]
+						"title":"point b",
+						"values": [true,true]
 					},
 					{
-						"point c": [true,true]
+							"title":"point c",
+						"values": [true,true]
 					},
 					{
-						"point d": [true,true]
+						"title":"point d",
+						"values": [true,true]
 					}
 				],
 				"status": "certified"
 			},
 			"level2": {
 				"id": 2,
-				"checklist": [{
-						"point a": [true,false]
+				"checklist": [
+					{
+						"title":"point a",
+						"values": [true,false]
 					},
 					{
-						"point b": [true,false]
+						"title":"point b",
+						"values": [true,false]
 					},
 					{
-						"point c": [true,false]
+							"title":"point c",
+						"values": [true,false]
 					},
 					{
-						"point d": [true,false]
+						"title":"point d",
+						"values": [true,false]
 					},
 					{
-						"point e": [true,false]
+						"title":"point e",
+						"values": [true,false]
 					},
 					{
-						"point f": [false,false]
+						"title":"point f",
+						"values": [true,false]
 					},
 					{
-						"point g": [false,false]
+							"title":"point g",
+						"values": [true,false]
 					}
 				],
 				"status": "inprogress"
@@ -82,28 +94,24 @@
 			"id": 1,
 			"checklist": [
 				{
-					"point a": [
-						true,
-						true
-					]
+					"title":"point a",
+					"vG":true,
+					"vI":true
 				},
 				{
-					"point b": [
-						true,
-						true
-					]
+					"title":"point b",
+					"vG":true,
+					"vI":true
 				},
 				{
-					"point c": [
-						true,
-						true
-					]
+						"title":"point c",
+						"vG":true,
+						"vI":true
 				},
 				{
-					"point d": [
-						true,
-						true
-					]
+					"title":"point d",
+					"vG":true,
+					"vI":true
 				}
 			],
 			"status": "certified"
@@ -112,46 +120,39 @@
 			"id": 2,
 			"checklist": [
 				{
-					"point a": [
-						true,
-						false
-					]
+					"title":"point a",
+					"vG":true,
+					"vI":true
 				},
 				{
-					"point b": [
-						true,
-						false
-					]
+					"title":"point b",
+					"vG":true,
+					"vI":true
 				},
 				{
-					"point c": [
-						true,
-						false
-					]
+						"title":"point c",
+						"vG":true,
+						"vI":true
 				},
 				{
-					"point d": [
-						true,
-						true
-					]
+					"title":"point d",
+					"vG":true,
+					"vI":true
 				},
 				{
-					"point e": [
-						true,
-						true
-					]
+					"title":"point e",
+					"vG":true,
+					"vI":true
 				},
 				{
-					"point f": [
-						true,
-						true
-					]
+					"title":"point f",
+					"vG":true,
+					"vI":true
 				},
 				{
-					"point g": [
-						true,
-						true
-					]
+						"title":"point g",
+						"vG":true,
+						"vI":true
 				}
 			],
 			"status": "certified"
