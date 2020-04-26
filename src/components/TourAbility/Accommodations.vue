@@ -111,7 +111,7 @@
         </DataView>
 
 
-        <Dialog :header="'Request for certification '+dialogTitle" :position="'top'" :visible.sync="display" :style="{width: '80%'}"
+        <Dialog :header="'Request for certification '+dialogTitle" :position="'top'" :visible.sync="display" :style="{width: '100%'}"
                 :modal="true" :closable="false">
 
             <div v-if="showBLev1">
@@ -163,6 +163,7 @@
             <template #footer>
                 <!--<Button label="Yes" @click="close" icon="pi pi-check"/>-->
                 <Button label="Close" @click="close" icon="pi pi-times" class="p-button-secondary"/>
+                <Button label="Confirm" @click="close" icon="pi pi-check" class="p-button-primary"/>
             </template>
         </Dialog>
 
