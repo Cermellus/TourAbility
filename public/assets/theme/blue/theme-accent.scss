@@ -1,12 +1,12 @@
 $primaryLighterColor:#BBDEFB;
-$primaryColor:#2196F3;
-$primaryDarkColor:#1976D2;
-$primaryDarkerColor:#1565C0;
+$primaryColor:#e30613;
+$primaryDarkColor: #900810;
+$primaryDarkerColor: #61050e;
 $primaryTextColor:#ffffff;
 
-$accentColor:#FFC107;
-$accentDarkerColor:#FFA000;
-$accentColorText:#000000;
+$accentColor:$primaryColor;
+$accentDarkerColor:$primaryDarkColor;
+$accentColorText:$primaryTextColor;
 
 $containerHeaderBgColor:$primaryColor;
 $containerHeaderBorder:1px solid $primaryColor;

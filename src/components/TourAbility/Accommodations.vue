@@ -33,7 +33,7 @@
                                         <span class="team-member-role">Not certified</span>
                                     </div>
                                     <div v-else>
-                                        <vue-fontawesome icon="certificate" style="fontSize:1.5em;color:#989898;"  />
+                                        <vue-fontawesome icon="certificate" style="fontSize:1.5em;color:#FFC107;"  />
                                         <span class="team-member-role"> {{getCertificationTitle(slotProps.data.certifications)}}</span>
                                     </div>
                                 </div>
@@ -60,7 +60,7 @@
                                         <span class="team-member-role">Not certified</span>
                                     </div>
                                     <div v-else>
-                                        <vue-fontawesome icon="certificate" style="fontSize:1.5em;color:#989898;"  />
+                                        <vue-fontawesome icon="certificate" style="fontSize:1.5em;color:#FFC107;"  />
                                         <span class="team-member-role">{{getCertificationTitle(slotProps.data.certifications)}}</span>
                                     </div>
                                 </div>

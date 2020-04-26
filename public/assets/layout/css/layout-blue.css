@@ -137,7 +137,7 @@ a {
   right: 0;
   z-index: 997;
   padding: 8px 25px;
-  background-color: #2196F3;
+  background-color: #e30613;
   -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -161,7 +161,7 @@ a {
   height: 44px;
   line-height: 44px;
   text-align: center;
-  color: #ffffff;
+  color: #fde3d7;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -175,12 +175,12 @@ a {
   font-size: 28px;
 }
 .layout-wrapper .layout-topbar .layout-menu-button:hover {
-  background-color: #64b5f6;
+  background-color: #fde3d7;
 }
 .layout-wrapper .layout-topbar .layout-menu-button:focus {
-  -webkit-box-shadow: 0 0 0 0 #64b5f6;
-  -moz-box-shadow: 0 0 0 0 #64b5f6;
-  box-shadow: 0 0 0 0 #64b5f6;
+  -webkit-box-shadow: 0 0 0 0 #fde3d7;
+  -moz-box-shadow: 0 0 0 0 #fde3d7;
+  box-shadow: 0 0 0 0 #fde3d7;
 }
 .layout-wrapper .layout-topbar #topbar-menu-button {
   cursor: pointer;
@@ -191,7 +191,7 @@ a {
   display: none;
   float: right;
   text-align: center;
-  color: #ffffff;
+  color: #fde3d7;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -205,12 +205,12 @@ a {
   font-size: 28px;
 }
 .layout-wrapper .layout-topbar #topbar-menu-button:hover {
-  background-color: #64b5f6;
+  background-color: #fde3d7;
 }
 .layout-wrapper .layout-topbar #topbar-menu-button:focus {
-  -webkit-box-shadow: 0 0 0 0 #64b5f6;
-  -moz-box-shadow: 0 0 0 0 #64b5f6;
-  box-shadow: 0 0 0 0 #64b5f6;
+  -webkit-box-shadow: 0 0 0 0 #fde3d7;
+  -moz-box-shadow: 0 0 0 0 #fde3d7;
+  box-shadow: 0 0 0 0 #fde3d7;
 }
 .layout-wrapper .layout-topbar .topbar-menu {
   float: right;
@@ -240,7 +240,7 @@ a {
   transition: background-color 0.3s;
 }
 .layout-wrapper .layout-topbar .topbar-menu > li > button .topbar-icon {
-  color: #ffffff;
+  color: #fde3d7;
   line-height: inherit;
   font-size: 28px;
 }
@@ -249,12 +249,12 @@ a {
   margin-top: 4px;
 }
 .layout-wrapper .layout-topbar .topbar-menu > li > button:hover {
-  background-color: #64b5f6;
+  background-color: #fde3d7;
 }
 .layout-wrapper .layout-topbar .topbar-menu > li > button:focus {
-  -webkit-box-shadow: 0 0 0 0 #64b5f6;
-  -moz-box-shadow: 0 0 0 0 #64b5f6;
-  box-shadow: 0 0 0 0 #64b5f6;
+  -webkit-box-shadow: 0 0 0 0 #fde3d7;
+  -moz-box-shadow: 0 0 0 0 #fde3d7;
+  box-shadow: 0 0 0 0 #fde3d7;
 }
 .layout-wrapper .layout-topbar .topbar-menu > li > button .topbar-item-name {
   display: none;
@@ -523,7 +523,7 @@ a {
   overflow: auto;
 }
 .layout-wrapper .layout-menu-container .layout-menu-logo {
-  background-color: #42A5F5;
+  background-color: #e30613;
 }
 .layout-wrapper .layout-menu-container .layout-menu-logo button {
   display: block;
@@ -537,9 +537,9 @@ a {
   height: 30px;
 }
 .layout-wrapper .layout-menu-container .layout-menu-logo button:focus {
-  -webkit-box-shadow: 0 0 0 0 #42A5F5;
-  -moz-box-shadow: 0 0 0 0 #42A5F5;
-  box-shadow: 0 0 0 0 #42A5F5;
+  -webkit-box-shadow: 0 0 0 0 #e30613;
+  -moz-box-shadow: 0 0 0 0 #e30613;
+  box-shadow: 0 0 0 0 #e30613;
 }
 .layout-wrapper .layout-menu-container .layout-profile.layout-profile-active .layout-profile-icon {
   -webkit-transform: rotate(-180deg);
@@ -705,8 +705,8 @@ a {
   font-size: 12px;
   margin-top: -10px;
   font-weight: 700;
-  background-color: #2196F3;
-  color: #ffffff;
+  background-color: #e30613;
+  color: #e30613;
   text-align: center;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -840,10 +840,10 @@ a {
   background-color: #e0e0e0;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu li a.active-route .layout-menuitem-text, .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu li a.active-route .layout-menuitem-icon {
-  color: #2196F3;
+  color: #fde3d7;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu li a.router-link-active .layout-menuitem-text, .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu li a.router-link-active .layout-menuitem-icon, .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu li a.router-link-exact-active .layout-menuitem-text, .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu li a.router-link-exact-active .layout-menuitem-icon {
-  color: #2196F3;
+  color: #fde3d7;
 }
 .layout-wrapper.layout-menu-light .layout-menu-container .layout-menu > li > div {
   color: #727272;
@@ -899,10 +899,10 @@ a {
   background-color: #373737;
 }
 .layout-wrapper.layout-menu-dark .layout-menu-container .layout-menu li a.active-route .layout-menuitem-text, .layout-wrapper.layout-menu-dark .layout-menu-container .layout-menu li a.active-route .layout-menuitem-icon {
-  color: #2196F3;
+  color: #fde3d7;
 }
 .layout-wrapper.layout-menu-dark .layout-menu-container .layout-menu li a.router-link-active .layout-menuitem-text, .layout-wrapper.layout-menu-dark .layout-menu-container .layout-menu li a.router-link-active .layout-menuitem-icon, .layout-wrapper.layout-menu-dark .layout-menu-container .layout-menu li a.router-link-exact-active .layout-menuitem-text, .layout-wrapper.layout-menu-dark .layout-menu-container .layout-menu li a.router-link-exact-active .layout-menuitem-icon {
-  color: #2196F3;
+  color: #fde3d7;
 }
 .layout-wrapper.layout-menu-dark .layout-menu-container .layout-menu > li > div {
   color: #757575;
@@ -1034,7 +1034,7 @@ a {
     min-width: 250px;
     max-height: 450px;
     display: none;
-    border-left: 4px solid #2196F3;
+    border-left: 4px solid #e30613;
     padding: 8px 12px;
     -moz-border-radius-topright: 3px;
     -webkit-border-top-right-radius: 3px;
@@ -1090,7 +1090,7 @@ a {
     margin-bottom: 0;
   }
   .layout-wrapper.layout-slim .layout-menu-container .layout-menu > li.active-menuitem > a {
-    background-color: #2196F3;
+    background-color: transparent;
     -moz-border-radius-topright: 0;
     -webkit-border-top-right-radius: 0;
     border-top-right-radius: 0;
@@ -1101,7 +1101,7 @@ a {
   .layout-wrapper.layout-slim .layout-menu-container .layout-menu > li.active-menuitem > a .layout-menuitem-text,
 .layout-wrapper.layout-slim .layout-menu-container .layout-menu > li.active-menuitem > a .layout-menuitem-icon,
 .layout-wrapper.layout-slim .layout-menu-container .layout-menu > li.active-menuitem > a .layout-submenu-toggler {
-    color: #ffffff;
+    color: #fde3d7;
   }
   .layout-wrapper.layout-slim .layout-menu-container .layout-menu > li > div {
     display: none;
@@ -1135,7 +1135,7 @@ a {
     min-width: 250px;
     max-height: 450px;
     display: none;
-    border-left: 4px solid #2196F3;
+    border-left: 4px solid #e30613;
     padding: 8px 12px;
     -moz-border-radius-topright: 3px;
     -webkit-border-top-right-radius: 3px;
@@ -1310,7 +1310,7 @@ a {
     margin-bottom: 0;
   }
   .layout-wrapper.layout-horizontal .layout-menu-container .layout-menu > li.active-menuitem > a {
-    background-color: #2196F3;
+    background-color: transparent;
     -moz-border-radius-bottomleft: 0;
     -webkit-border-bottom-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -1321,7 +1321,7 @@ a {
   .layout-wrapper.layout-horizontal .layout-menu-container .layout-menu > li.active-menuitem > a .layout-menuitem-text,
 .layout-wrapper.layout-horizontal .layout-menu-container .layout-menu > li.active-menuitem > a .layout-menuitem-icon,
 .layout-wrapper.layout-horizontal .layout-menu-container .layout-menu > li.active-menuitem > a .layout-submenu-toggler {
-    color: #ffffff;
+    color: #fde3d7;
   }
   .layout-wrapper.layout-horizontal .layout-menu-container .layout-menu > li > div {
     display: none;
@@ -1345,7 +1345,7 @@ a {
     padding: 8px 12px;
     max-height: 450px;
     overflow: auto;
-    border-top: 4px solid #2196F3;
+    border-top: 4px solid #e30613;
     -moz-border-radius-bottomleft: 3px;
     -webkit-border-bottom-left-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -1581,7 +1581,7 @@ a {
   bottom: 15px;
 }
 .layout-wrapper .layout-ajax-loader .layout-ajax-loader-icon {
-  color: #2196F3;
+  color: #e30613;
   font-size: 32px;
 }
 
@@ -2447,7 +2447,7 @@ a {
 }
 .landing-body .landing-wrapper #promo {
   padding: 42px 140px;
-  border-top: 5px solid #2196F3;
+  border-top: 5px solid #e30613;
   background-color: #f2f2f2;
   position: relative;
 }
@@ -2526,7 +2526,7 @@ a {
   color: #1fc4ac;
 }
 .landing-body .landing-wrapper #pricing .pricing-box:hover {
-  border-color: #2196F3;
+  border-color: #e30613;
 }
 .landing-body .landing-wrapper #multimedia {
   padding: 42px 140px;
@@ -2709,3 +2709,5 @@ a {
   /* Legacy iOS */
 }
 /* Add your customizations of layout here */
+
+/*# sourceMappingURL=layout-blue.css.map */

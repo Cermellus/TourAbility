@@ -3794,6 +3794,9 @@ body .p-fluid .p-inplace.p-inplace-closable .p-inplace-content > :first-child {
 }
 
 @media screen and (min-width: 897px) {
+  .layout-wrapper .layout-topbar {
+    height: 80px !important;
+  }
   .layout-wrapper.layout-horizontal .layout-menu-container {
     width: 50% !important;
     top: 7px !important;
@@ -3802,7 +3805,7 @@ body .p-fluid .p-inplace.p-inplace-closable .p-inplace-content > :first-child {
     box-shadow: none !important;
   }
   .layout-wrapper.layout-horizontal .layout-main {
-    padding-top: 60px !important;
+    padding-top: 80px !important;
   }
   .layout-wrapper.layout-horizontal.layout-menu-light .layout-menu-container {
     border-bottom: transparent !important;

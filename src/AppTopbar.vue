@@ -10,7 +10,7 @@
         </div>
 
 		<button class="layout-topbar-logo p-link">
-			<img id="layout-topbar-logo" alt="babylon-layout" src="assets/layout/images/logo-white.png"/>
+			<img id="layout-topbar-logo" alt="babylon-layout" src="assets/layout/images/tourability_logo.png"/>
 		</button>
 
 		<button class="layout-menu-button p-link" @click="onMenuButtonClick">
@@ -110,3 +110,20 @@ export default {
 
 }
 </script>
+<style lang="scss" scoped>
+	.layout-topbar-logo{
+		width: 25%;
+		padding: 0;
+		img {
+			margin: -2px!important;
+			width: 100%;
+			height: auto!important;
+			min-height: 50px!important;
+			max-height: 80px!important;
+			min-width: 230px!important;
+			max-width: 350px!important;
+			padding-right: 1em;
+
+		}
+	}
+</style>
