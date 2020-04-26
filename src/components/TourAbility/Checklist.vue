@@ -7,7 +7,7 @@
                 <p>Below you can find, for each certifcation level, the list of anti-corona measures that need to be implemented by an accommodation provider.</p>
 
                 <Accordion>
-                    <AccordionTab header="Level I">
+                    <AccordionTab header="Cert. level 1">
                         <div class="task-list">
                             <div class="card card-w-title tasks">
                                 <h1>Tasks</h1>
@@ -20,7 +20,7 @@
                             </div>
                         </div>
                     </AccordionTab>
-                    <AccordionTab header="Level II">
+                    <AccordionTab header="Cert. level 2">
                         <div class="task-list">
                             <div class="card card-w-title tasks">
                                 <h1>Tasks</h1>
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                     </AccordionTab>
-                    <AccordionTab header="Level III">
+                    <AccordionTab header="Cert. level 3">
                         <div class="task-list">
                             <div class="card card-w-title tasks">
                                 <h1>Tasks</h1>
