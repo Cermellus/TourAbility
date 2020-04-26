@@ -110,14 +110,14 @@
                 :modal="true" :closable="false">
 
             <div v-if="showBLev1">
-                <Button :style="{width: '100%','margin-bottom':'20px','margin-top':'10px'}" label="Level 1"
+                <Button :style="{width: '100%','margin-bottom':'20px','margin-top':'10px'}" label="Cert. level 1"
                         icon="pi pi-plus"/>
             </div>
             <div v-else class="layout-dashboard">
                 <div class="p-grid">
                     <div class="p-col-12 task-list">
                         <div class="card card-w-title tasks">
-                            <h1>Level</h1>
+                            <h1>Cert. level 1</h1>
                             <ul>
                                 <li v-for="cert in CL1.checklist" :key="cert.id">
                                     <Checkbox name="task" value="report" v-model="tasksCheckbox"/>
@@ -132,13 +132,13 @@
             </div>
             <!--<CheckList v-else name="test1" v-bind:title="post.title" ></CheckList>-->
 
-            <Button v-if="showBLev2" :style="{width: '100%','margin-bottom':'20px','margin-top':'10px'}" label="Level 2"
+            <Button v-if="showBLev2" :style="{width: '100%','margin-bottom':'20px','margin-top':'10px'}" label="Cert. level 2"
                     icon="pi pi-plus"/>
             <div v-else class="layout-dashboard">
                 <div class="p-grid">
                     <div class="p-col-12 task-list">
                         <div class="card card-w-title tasks">
-                            <h1>Level</h1>
+                            <h1>Cert. level 2</h1>
                             <ul>
                                 <li v-for="cert in CL2.checklist" :key="cert.id">
                                     <Checkbox name="task" value="reports" v-model="tasksCheckbox"/>
@@ -152,7 +152,7 @@
                 </div>
             </div>
 
-            <Button v-if="showBLev3" :style="{width: '100%','margin-bottom':'20px','margin-top':'10px'}" label="Level 3"
+            <Button v-if="showBLev3" :style="{width: '100%','margin-bottom':'20px','margin-top':'10px'}" label="Cert. level 3"
                     icon="pi pi-plus"/>
 
             <template #footer>
