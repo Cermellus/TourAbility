@@ -61,12 +61,12 @@
                                 </div>
 
                                 <div class="p-col-3">
-                                    <div v-if="!getCertificationTitle(slotProps.data.certifications)">
+                                    <div v-if="!getCertification(slotProps.data.certifications)">
                                         <span class="certification">Not certified</span>
                                     </div>
                                     <div v-else>
-                                        <vue-fontawesome icon="certificate" style="fontSize:1.5em;color:#ffc107;"/>
-                                        <span class="certification"> {{getCertificationTitle(slotProps.data.certifications)}}</span>
+                                        <vue-fontawesome icon="certificate" style="margin-top:0.05em;fontSize:1.5em;color:#ffc107;"/>
+                                        <span :class="'certification lev-'+getCertification(slotProps.data.certifications).id">{{getCertification(slotProps.data.certifications).title}}</span>
                                     </div>
                                 </div>
 
@@ -83,8 +83,8 @@
                 </div>
             </template>
             <template #grid="slotProps">
-                <div style="padding: .5em" class="p-col-12 p-md-3">
-                    <Panel :header="slotProps.data.vin" style="text-align: center">
+                <div style="padding: .4em;min-width: 350px;" class="p-col-12 p-md-3">
+                    <Panel :header="slotProps.data.vin" style="text-align: center;">
                         <img :src="'assets/layout/images/structures/' + slotProps.data.image + '.jpeg'"
                              :alt="slotProps.data.image"/>
                         <div class="car-detail">{{slotProps.data.name}} - {{slotProps.data.location.council}}</div>
@@ -95,17 +95,20 @@
                         </div>
 
                         <div class="p-col-12">
-                            <div v-if="!getCertificationTitle(slotProps.data.certifications)">
+                            <div v-if="!getCertification(slotProps.data.certifications)">
                                 <span class="certification">Not certified</span>
                             </div>
                             <div v-else>
                                 <vue-fontawesome icon="certificate" style="fontSize:1.5em;color:#ffc107;"/>
-                                <span class="certification">{{getCertificationTitle(slotProps.data.certifications)}}</span>
+                                <span :class="'certification lev-'+getCertification(slotProps.data.certifications).id">{{getCertification(slotProps.data.certifications).title}}</span>
                             </div>
                         </div>
 
-                        <Button icon="pi pi-plus" @click="open(slotProps.data)"></Button>
-                    </Panel>
+                        <div style="text-align: center">
+                            <Button icon="pi pi-list" style="margin-right: 0.5em;" @click="open(slotProps.data)"/>
+                            <Button v-if="slotProps.data.published" icon="fa fa-eye-slash" @click="unpublish(slotProps.data)"/>
+                            <Button v-else icon="fa fa-eye" @click="publish(slotProps.data)"/>
+                        </div>                    </Panel>
                 </div>
             </template>
         </DataView>
@@ -315,16 +318,16 @@
                     this.sortKey = sortValue;
                 }
             },
-            getCertificationTitle(certifications) {
+            getCertification(certifications) {
                 if (certifications) {
                     if (certifications.level1 && certifications.level1.status === 'certified') {
                         if (certifications.level2 && certifications.level2.status === 'certified') {
                             if (certifications.level3 && certifications.level3.status === 'certified') {
-                                return "Level 3";
+                                return {id:3,"title":"Level 2"};
                             }
-                            return "Level 2";
+                            return {id:2,"title":"Level 2"};
                         }
-                        return "Level 1";
+                        return {id:1,"title":"Level 1"};
                     }
                 }
                 return null;
@@ -408,7 +411,16 @@
         font-size: 14px;
         border-radius: 4px;
         padding: 4px;
-        background-color: #2196F3;
         color: #ffffff;
+        background-color: #C3B1A9;
+    }
+    .lev-1{
+        background-color: #69bcff;
+    }
+    .lev-2{
+        background-color: #ee6509;
+    }
+    .lev-3{
+        background-color: #32c104;
     }
 </style>
