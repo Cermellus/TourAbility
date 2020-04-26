@@ -2,27 +2,27 @@
     <div>
 
         <div class="p-grid p-fluid" style="margin-top:30px;margin-bottom:30px;">
-            <div class="p-col-1 p-lg-1">
+            <div class="p-col-1 p-lg-1" style="min-width: 10em;">
                 <ToggleButton v-model="fc1" @change="fcSimulation(1)" onLabel="All" offLabel="All" onIcon="pi pi-check"
                               offIcon="pi pi-times"/>
             </div>
-            <div class="p-col-2 p-lg-2">
+            <div class="p-col-2 p-lg-2" style="min-width: 10em;">
                 <ToggleButton v-model="fc2" @change="fcSimulation(2)" onLabel="Online" offLabel="Online"
                               onIcon="pi pi-check" offIcon="pi pi-times"/>
             </div>
-            <div class="p-col-2 p-lg-2">
+            <div class="p-col-2 p-lg-2" style="min-width: 10em;">
                 <ToggleButton v-model="fc3" @change="fcSimulation(3)" onLabel="Unpublished" offLabel="Unpublished"
                               onIcon="pi pi-check" offIcon="pi pi-times"/>
             </div>
-            <div class="p-col-2 p-lg-2">
+            <div class="p-col-2 p-lg-2" style="min-width: 10em;">
                 <ToggleButton v-model="fc4" @change="fcSimulation(4)" onLabel="Level 1"
                               offLabel="Level 1" onIcon="pi pi-check" offIcon="pi pi-times"/>
             </div>
-            <div class="p-col-2 p-lg-2">
+            <div class="p-col-2 p-lg-2" style="min-width: 10em;">
                 <ToggleButton v-model="fc5" @change="fcSimulation(5)" onLabel="Level 2"
                               offLabel="Level 2" onIcon="pi pi-check" offIcon="pi pi-times"/>
             </div>
-            <div class="p-col-2 p-lg-2">
+            <div class="p-col-2 p-lg-2" style="min-width: 10em;">
                 <ToggleButton v-model="fc6" @change="fcSimulation(6)" onLabel="Level 3"
                               offLabel="Level 3" onIcon="pi pi-check" offIcon="pi pi-times"/>
             </div>
@@ -62,18 +62,23 @@
 
                                 <div class="p-col-3">
                                     <div v-if="!getCertificationTitle(slotProps.data.certifications)">
-                                        <span class="team-member-role">Not certified</span>
+                                        <span class="certification">Not certified</span>
                                     </div>
                                     <div v-else>
                                         <vue-fontawesome icon="certificate" style="fontSize:1.5em;color:#ffc107;"/>
-                                        <span class="team-member-role"> {{getCertificationTitle(slotProps.data.certifications)}}</span>
+                                        <span class="certification"> {{getCertificationTitle(slotProps.data.certifications)}}</span>
                                     </div>
                                 </div>
 
 
                             </div>
                         </div>
-                        <Button icon="pi pi-plus" @click="open(slotProps.data)"></Button>
+                        <div style="text-align: right">
+                            <Button icon="pi pi-list" style="margin-right: 0.5em;" @click="open(slotProps.data)"/>
+                            <Button v-if="slotProps.data.published" icon="fa fa-eye-slash" @click="unpublish(slotProps.data)"/>
+                            <Button v-else icon="fa fa-eye" @click="publish(slotProps.data)"/>
+                        </div>
+
                     </div>
                 </div>
             </template>
@@ -91,11 +96,11 @@
 
                         <div class="p-col-12">
                             <div v-if="!getCertificationTitle(slotProps.data.certifications)">
-                                <span class="team-member-role">Not certified</span>
+                                <span class="certification">Not certified</span>
                             </div>
                             <div v-else>
                                 <vue-fontawesome icon="certificate" style="fontSize:1.5em;color:#ffc107;"/>
-                                <span class="team-member-role">{{getCertificationTitle(slotProps.data.certifications)}}</span>
+                                <span class="certification">{{getCertificationTitle(slotProps.data.certifications)}}</span>
                             </div>
                         </div>
 
@@ -253,6 +258,12 @@
 
                 this.display = true;
             },
+            publish(structure){
+                structure.published = true;
+            },
+            unpublish(structure){
+                structure.published = false;
+            },
             close() {
                 this.certifications = false;
                 this.display = false;
@@ -390,5 +401,13 @@
             color: #e30613 !important;
             border: 1px solid #EBDFDA;
         }
+    }
+    .certification{
+        margin-left: 0.9em;
+        font-size: 14px;
+        border-radius: 4px;
+        padding: 4px;
+        background-color: #2196F3;
+        color: #ffffff;
     }
 </style>

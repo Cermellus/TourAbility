@@ -43,8 +43,8 @@ export default {
 	created: function(){
 		this.menu = [
 			{label: 'My Accommodations', to: '/accommodations'},
-			{label: 'My Certifications', to: '/certifications'},
-			{label: 'My Courses', to: '/courses'}
+			{label: 'Checklist', to: '/checklist'},
+			{label: 'Courses', to: '/courses'}
 		];
     },
     watch: {

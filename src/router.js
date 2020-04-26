@@ -30,9 +30,9 @@ export default new Router({
 			component: () => import('./components/TourAbility/Accommodations.vue')
 		},
 		{
-			path: '/certifications',
-			name: 'certifications',
-			component: () => import('./components/TourAbility/Certifications.vue')
+			path: '/checklist',
+			name: 'checklist',
+			component: () => import('./components/TourAbility/Checklist.vue')
 		},
 		{
 			path: '/courses',
