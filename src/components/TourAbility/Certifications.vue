@@ -3,6 +3,9 @@
         <div class="p-col-12">
             <div class="card card-w-title">
                 <h1>How to become a "COVID-free" facility!</h1>
+
+                <p>Below you can find, for each certifcation level, the list of anti-corona measures that need to be implemented by an accommodation provider.</p>
+
                 <Accordion>
                     <AccordionTab header="Level I">
                         <div class="task-list">
